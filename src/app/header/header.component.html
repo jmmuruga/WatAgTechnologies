@@ -1,14 +1,14 @@
-<header #header class="fixed top-0 flex items-center px-20 py-5 text-white transition-all">
-   <a class="w-[900px] h-[130px] transition-all">
+<header #header class="fixed top-0 flex items-center px-20 py-5 text-white transition-all z-50">
+   <a href="" class="w-[900px] h-[130px] transition-all">
         <img class="object-cover" [src]="this.logo">
     </a>
     <nav class="w-full transition-all">
 <ul class="flex justify-evenly items-center font-semibold ">
- <li class="cursor-pointer">ABOUT US</li>  
- <li class="cursor-pointer">SERVICES AND TECHNOLOGY</li>  
+ <li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>  
+ <li class="cursor-pointer" routerLink="/servicesandtechnology">SERVICES AND TECHNOLOGY</li>  
  <li class="cursor-pointer">OUR CLIENTS</li> 
  <li class="cursor-pointer">IoT</li> 
- <li class="cursor-pointer">CONTACT</li> 
+ <li class="cursor-pointer" routerLink="/contact">CONTACT</li> 
 </ul>
     </nav>
 </header>
