@@ -5,10 +5,10 @@ import { AboutComponent } from './about/about.component';
 import { ServicesAndTechnologyComponent } from './services-and-technology/services-and-technology.component';
 import { ContactComponent } from './contact/contact.component';
 import { IotComponent } from './iot/iot.component';
-import { WasteWaterAndSewageComponent } from './waste-water-and-sewage/waste-water-and-sewage.component';
-import { SolidWasteManagementComponent } from './solid-waste-management/solid-waste-management.component';
-import { WaterTreatmentSystemsComponent } from './water-treatment-systems/water-treatment-systems.component';
-import { BioAugmentationComponent } from './bio-augmentation/bio-augmentation.component';
+import { WasteWaterAndSewageComponent } from './services-and-technology/waste-water-and-sewage/waste-water-and-sewage.component';
+import { SolidWasteManagementComponent } from './services-and-technology/solid-waste-management/solid-waste-management.component';
+import { WaterTreatmentSystemsComponent } from './services-and-technology/water-treatment-systems/water-treatment-systems.component';
+import { BioAugmentationComponent } from './services-and-technology/bio-augmentation/bio-augmentation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -17,10 +17,10 @@ const routes: Routes = [
   { path: 'servicesandtechnology', component: ServicesAndTechnologyComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'iot', component: IotComponent },
-  { path: 'iot', component: WasteWaterAndSewageComponent },
-  { path: 'iot', component: WaterTreatmentSystemsComponent },
-  { path: 'iot', component: SolidWasteManagementComponent },
-  { path: 'iot', component: BioAugmentationComponent },
+  { path: 'servicesandtechnology/wastewaterandsewage', component: WasteWaterAndSewageComponent },
+  { path: 'servicesandtechnology/watertreatmentsystems', component: WaterTreatmentSystemsComponent },
+  { path: 'servicesandtechnology/solidwastemanagement', component: SolidWasteManagementComponent },
+  { path: 'servicesandtechnology/bioaugmentation', component: BioAugmentationComponent },
 ];
 
 @NgModule({

@@ -10,10 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { ServicesAndTechnologyComponent } from './services-and-technology/services-and-technology.component';
 import { IotComponent } from './iot/iot.component';
 import { ContactComponent } from './contact/contact.component';
-import { WasteWaterAndSewageComponent } from './waste-water-and-sewage/waste-water-and-sewage.component';
-import { WaterTreatmentSystemsComponent } from './water-treatment-systems/water-treatment-systems.component';
-import { SolidWasteManagementComponent } from './solid-waste-management/solid-waste-management.component';
-import { BioAugmentationComponent } from './bio-augmentation/bio-augmentation.component';
+import { WasteWaterAndSewageComponent } from './services-and-technology/waste-water-and-sewage/waste-water-and-sewage.component';
+import { WaterTreatmentSystemsComponent } from './services-and-technology/water-treatment-systems/water-treatment-systems.component';
+import { SolidWasteManagementComponent } from './services-and-technology/solid-waste-management/solid-waste-management.component';
+import { BioAugmentationComponent } from './services-and-technology/bio-augmentation/bio-augmentation.component';
 
 @NgModule({
   declarations: [
