@@ -10,6 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { ServicesAndTechnologyComponent } from './services-and-technology/services-and-technology.component';
 import { IotComponent } from './iot/iot.component';
 import { ContactComponent } from './contact/contact.component';
+import { WasteWaterAndSewageComponent } from './waste-water-and-sewage/waste-water-and-sewage.component';
+import { WaterTreatmentSystemsComponent } from './water-treatment-systems/water-treatment-systems.component';
+import { SolidWasteManagementComponent } from './solid-waste-management/solid-waste-management.component';
+import { BioAugmentationComponent } from './bio-augmentation/bio-augmentation.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     ServicesAndTechnologyComponent,
     IotComponent,
-    ContactComponent
+    ContactComponent,
+    WasteWaterAndSewageComponent,
+    WaterTreatmentSystemsComponent,
+    SolidWasteManagementComponent,
+    BioAugmentationComponent
   ],
   imports: [
     BrowserModule,
