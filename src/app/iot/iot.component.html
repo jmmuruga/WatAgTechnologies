@@ -1,5 +1,5 @@
 <!--Header-->
-<app-header class="text-black" />
+<app-header/>
 <div>
   <!--Banner-->
   <div
@@ -77,26 +77,84 @@
     <div class="w-[90%] border border-stone-300">
       <div class="flex">
         <div
-          class="w-[50%] cursor-pointer bg-white flex justify-center font-semibold text-xl py-3 border-t-[3px] border-green-500"
+          (click)="openTab(1)"
+          [ngClass]="{
+            'bg-white border-green-500': isShowBlockDiagram,
+            'bg-stone-100 border-transparent': !isShowBlockDiagram
+          }"
+          class="w-[50%] cursor-pointer hover:bg-white flex justify-center text-xl py-2 border-t-[3px] border-transparent"
         >
           Block Diagram
         </div>
         <div
-          class="w-[50%] cursor-pointer bg-stone-100 hover:bg-white flex justify-center font-semibold text-xl py-3"
+          (click)="openTab(2)"
+          [ngClass]="{
+            'bg-white border-green-500': isShowSignal,
+            'bg-stone-100 border-transparent': !isShowSignal
+          }"
+          class="w-[50%] cursor-pointer hover:bg-white flex justify-center text-xl py-2 border-t-[3px] border-transparent"
         >
           Signals
         </div>
         <div
-          class="w-[50%] cursor-pointer bg-stone-100 hover:bg-white flex justify-center font-semibold text-xl py-3"
+          (click)="openTab(3)"
+          [ngClass]="{
+            'bg-white border-green-500': isShowDashboard,
+            'bg-stone-100 border-transparent': !isShowDashboard
+          }"
+          class="w-[50%] cursor-pointer hover:bg-white flex justify-center text-xl py-2 border-t-[3px] border-transparent"
         >
           Dashboard
         </div>
       </div>
-      <div class="flex flex-col gap-1 px-3 py-5 bg-white">
+      <div
+        class="flex flex-col gap-1 px-3 py-5 bg-white"
+        *ngIf="this.isShowBlockDiagram"
+      >
         <p>
           The block diagram in Figure 1 consists of an electrical block which
           provides electric power and electrical protection and switching
           circuits for the pumps. This electrical block takes care of the
+          regular plant operation. From this block two sets of signals are
+          obtained-
+        </p>
+        <div class="mx-10 my-5">
+          <p class="mb-2">a. Power consumption and power factor and</p>
+          <p>b. Control/status signals</p>
+        </div>
+        <p>
+          The signals sent to respective signal processing blocks. The power
+          signals are processed by analog processing block and the control
+          signals by a digital signal processing block. The analog and digital
+          data are then combined in the IoT block and uploaded to the cloud via
+          the networking block. The dashboard described here displays the data
+          received from the cloud.
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-1 px-3 py-5 bg-white"
+        *ngIf="this.isShowSignal"
+      >
+        <p>
+          This electrical block takes care of the regular plant operation. From
+          this block two sets of signals are obtained-
+        </p>
+        <div class="mx-10 my-5">
+          <p class="mb-2">a. Power consumption and power factor and</p>
+          <p>b. Control/status signals</p>
+        </div>
+        <p>
+          The analog and digital data are then combined in the IoT block and
+          uploaded to the cloud via the networking block. The dashboard
+          described here displays the data received from the cloud.
+        </p>
+      </div>
+      <div
+        class="flex flex-col gap-1 px-3 py-5 bg-white"
+        *ngIf="this.isShowDashboard"
+      >
+        <p>
+          This electrical block takes care of the
           regular plant operation. From this block two sets of signals are
           obtained-
         </p>
@@ -232,7 +290,7 @@
       class="w-[50%] flex flex-col justify-center items-center gap-2 font-semibold text-white"
     >
       <div class="text-[18px]">For More Info:</div>
-      <button class="bg-green-500 px-5 py-2 rounded-md w-fit">
+      <button routerLink="/contact" class="bg-green-500 px-5 py-2 rounded-md w-fit">
         Contact us
       </button>
     </div>
@@ -271,7 +329,7 @@
       <img src="../../assets/Logo/BYTSCAPE-BROCHURE-V3.1-correction.png" />
     </div>
   </div>
-  <!--Conatct-form-->
+  <!--Contact-form-->
   <div
     class="flex flex-col justify-center items-center align-center gap-5 bg-[#EEEEEE] py-10"
   >
@@ -327,4 +385,4 @@
   </div>
 </div>
 <!--Footer-->
-<app-footer/>
+<app-footer />

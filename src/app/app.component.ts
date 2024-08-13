@@ -1,12 +1,17 @@
 import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavigationEnd, NavigationStart, Router,Event as NavigationEvent, } from '@angular/router';
+import {
+  NavigationEnd,
+  NavigationStart,
+  Router,
+  Event as NavigationEvent,
+} from '@angular/router';
 import { ScrollService } from './scroll.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'ProjectOne';
@@ -17,7 +22,7 @@ export class AppComponent {
   constructor(
     private router: Router,
     private viewportScroller: ViewportScroller,
-    private scrollService: ScrollService,
+    private scrollService: ScrollService
   ) {
     this.currentUrl = this.router.url;
   }
@@ -41,6 +46,5 @@ export class AppComponent {
         }
       }
     });
-
   }
 }

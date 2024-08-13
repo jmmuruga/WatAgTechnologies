@@ -14,6 +14,8 @@ import { WasteWaterAndSewageComponent } from './services-and-technology/waste-wa
 import { WaterTreatmentSystemsComponent } from './services-and-technology/water-treatment-systems/water-treatment-systems.component';
 import { SolidWasteManagementComponent } from './services-and-technology/solid-waste-management/solid-waste-management.component';
 import { BioAugmentationComponent } from './services-and-technology/bio-augmentation/bio-augmentation.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { BioAugmentationComponent } from './services-and-technology/bio-augmenta
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

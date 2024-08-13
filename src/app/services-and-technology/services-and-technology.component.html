@@ -20,41 +20,65 @@
   </div>
   <!--Our-Services-->
   <div class="flex flex-col items-center gap-5 p-20">
-    <div class="w-[90%] flex justify-start mb-10 mr-6">
+    <div class="w-full flex justify-start mb-10 mr-6">
       <div class="text-2xl">
         <span class="text-green-500 mr-2">OUR</span
         ><span class="font-bold">SERVICES</span>
       </div>
     </div>
-    <div class="flex justify-between w-[90%]">
+    <div class="flex justify-between w-full">
       <div
+        (mouseover)="ServicesOver('Img1', 0)"
+        (mouseout)="ServicesOut('Img1', 0)"
         routerLink="/servicesandtechnology/wastewaterandsewage"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2]"
+        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
       >
-        <img class="w-[130px] h-[130px]" src="../../assets/Icons/icon-1b.png" />
+        <img
+          id="Img1"
+          class="w-[130px] h-[130px]"
+          src="../../assets/Icons/icon-1b.png"
+        />
         <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
       </div>
       <div
+        (mouseover)="ServicesOver('Img2', 1)"
+        (mouseout)="ServicesOut('Img2', 1)"
         routerLink="/servicesandtechnology/watertreatmentsystems"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2]"
+        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
       >
-        <img class="w-[130px] h-[130px]" src="../../assets/Icons/icon-2b.png" />
+        <img
+          id="Img2"
+          class="w-[130px] h-[130px]"
+          src="../../assets/Icons/icon-2b.png"
+        />
         <div class="text-center">Water Treatment Systems.</div>
       </div>
       <div
+        (mouseover)="ServicesOver('Img3', 2)"
+        (mouseout)="ServicesOut('Img3', 2)"
         routerLink="/servicesandtechnology/solidwastemanagement"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2]"
+        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
       >
-        <img class="w-[130px] h-[130px]" src="../../assets/Icons/icon-3b.png" />
+        <img
+          id="Img3"
+          class="w-[130px] h-[130px]"
+          src="../../assets/Icons/icon-3b.png"
+        />
         <div class="text-center">
           Solid Waste Management Systems: Incineration.
         </div>
       </div>
       <div
+        (mouseover)="ServicesOver('Img4', 3)"
+        (mouseout)="ServicesOut('Img4', 3)"
         routerLink="/servicesandtechnology/bioaugmentation"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2]"
+        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
       >
-        <img class="w-[130px] h-[130px]" src="../../assets/Icons/icon-4b.png" />
+        <img
+          id="Img4"
+          class="w-[130px] h-[130px]"
+          src="../../assets/Icons/icon-4b.png"
+        />
         <div class="text-center">
           Bio-Augmentation of Lakes,Ponds, Rivers and Rivulets.
         </div>
