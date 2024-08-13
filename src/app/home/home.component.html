@@ -1,5 +1,18 @@
 <!--Header-->
-<app-header />
+<header #header class="fixed top-0 flex items-center px-20 py-5 text-white transition-all z-50 shadow">
+  <a href="" class="w-[900px] h-[130px] transition-all">
+       <img class="object-cover" src="../../assets/Logo/logo.png">
+   </a>
+   <nav class="w-full transition-all">
+<ul class="flex justify-evenly items-center font-semibold ">
+<li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>  
+<li class="cursor-pointer" routerLink="/servicesandtechnology">SERVICES AND TECHNOLOGY</li>  
+<li class="cursor-pointer">OUR CLIENTS</li> 
+<li class="cursor-pointer" routerLink="/iot">IoT</li> 
+<li class="cursor-pointer" routerLink="/contact">CONTACT</li> 
+</ul>
+   </nav>
+</header>
 <!--HeroImage-->
 <div
   class="w-full h-[100vh] flex flex-col justify-evenly items-center pt-40"
