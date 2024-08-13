@@ -23,7 +23,7 @@
   "
 >
   <h1 class="text-6xl font-bold text-stroke">"Towards A Greener World"</h1>
-  <a
+  <a href="#Contact"
     ><img class="w-[200px] h-[133px]" src="../../assets/Banner/button.png"
   /></a>
   <a href="#About"><img class="w-10 h-10" src="../../assets/Icons/down-arrow (1).png" /></a>
@@ -43,7 +43,7 @@
         450 environmental engineering projects, for a wide range of sizes and
         applications.
       </p>
-      <button
+      <button routerLink="/aboutus"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold text-white"
       >
         Know more
@@ -65,7 +65,7 @@
         service of environmental projects.
       </p>
       <div class="w-[75%]">
-        <button
+        <button routerLink="/aboutus"
           class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold text-white"
         >
           Know more
@@ -77,60 +77,60 @@
 </div>
 <!--Services-->
 <div
-  class="w-full h-[500px] flex flex-col items-center text-white p-20"
+  class="w-full h-[500px] flex flex-col items-center text-white p-20 pt-14"
   style="
     background: url(../../assets/Banner/banner-2.jpg) no-repeat center;
     background-size: cover;
   "
 >
-  <h3 class="font-bold text-3xl">SERVICES</h3>
+  <h3 class="font-bold text-3xl mb-10">SERVICES</h3>
   <div class="flex gap-3">
-    <div class="flex flex-col gap-5 justify-center items-center">
+    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-1-400x400.png"
       />
       <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
-      <button
+      <button  routerLink="/servicesandtechnology/wastewaterandsewage"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <div class="flex flex-col gap-5 justify-center items-center py-14">
+    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-2-400x400.png"
       />
-      <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
-      <button
+      <div class="text-center">Water Treatment Systems.</div>
+      <button routerLink="/servicesandtechnology/watertreatmentsystems"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <div class="flex flex-col gap-5 justify-center items-center">
+    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-3-400x400.png"
       />
-      <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
-      <button
+      <div class="text-center">Solid Waste Management Systems: Incineration.</div>
+      <button routerLink="/servicesandtechnology/solidwastemanagement"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <div class="flex flex-col gap-5 justify-center items-center">
+    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-4w-400x400.png"
       />
-      <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
-      <button
+      <div class="text-center">Bio-Augmentation of Lakes,Ponds, Rivers and Rivulets</div>
+      <button routerLink="/servicesandtechnology/bioaugmentation"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
@@ -150,7 +150,7 @@
   <h4 class="font-bold text-3xl">OUR CLIENTS</h4>
 </div>
 <!--Contact-->
-<div  class="w-full flex flex-col text-white p-20"
+<div id="Contact" class="w-full flex flex-col text-white p-20"
 style="
   background: url(../../assets/Banner/contac-us-revised.jpg) no-repeat center;
   background-size: cover;
