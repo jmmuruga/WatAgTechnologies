@@ -50,4 +50,20 @@ export class HomeComponent implements OnInit {
   OurClients() {
     this.scrollToTableTop('OurClients');
   }
+//   nextSlides(){
+//     document.getElementById('slides')!.style.marginRight="";
+//   }
+// carousel =document.querySelector(".carousel");
+// firstImg=this.carousel?.querySelectorAll('img')[0];
+// arrowIcons =document.querySelectorAll(".wrapper a")
+
+//  firstImgWidth = this.firstImg!.clientWidth + 14;
+
+// arrowIcons.forEach(icon => {
+//   icons.addEventListners("click",()=>{
+//     carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+//   })
+// })
+
+
 }
