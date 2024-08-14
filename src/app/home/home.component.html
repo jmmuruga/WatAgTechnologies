@@ -7,7 +7,7 @@
 <ul class="flex justify-evenly items-center">
 <li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>  
 <li class="cursor-pointer" routerLink="/servicesandtechnology">SERVICES AND TECHNOLOGY</li>  
-<li class="cursor-pointer" routerLink="">OUR CLIENTS</li> 
+<li class="cursor-pointer" (click)="OurClients()" routerLink="/">OUR CLIENTS</li> 
 <li class="cursor-pointer" routerLink="/iot">IoT</li> 
 <li class="cursor-pointer" routerLink="/contact">CONTACT</li> 
 </ul>
@@ -147,7 +147,7 @@
     background-size: cover;
   "
 >
-  <h4 class="font-bold text-3xl"  #tableTop>OUR CLIENTS</h4>
+  <h4 class="font-bold text-3xl">OUR CLIENTS</h4>
 </div>
 <!--Contact-->
 <div id="Contact" class="w-full flex flex-col text-white p-20"

@@ -19,8 +19,7 @@ export class HeaderComponent {
   }
   // logo='../../assets/Logo/logo.png'
   // alternateLogo='../../assets/Logo/logogreensolutionsindia-1-e1658147079576.png'
-  setScro() {
-    debugger
-    localStorage.setItem('scid', 'OurClients');
+  OurClients() {
+    localStorage.setItem('scrlid', 'OurClients');
   }
 }
