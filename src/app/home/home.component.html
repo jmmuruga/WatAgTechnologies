@@ -1,24 +1,30 @@
 <!--Header-->
-<header #header class="fixed top-0 flex items-center px-20 py-5 text-white transition-all z-50 shadow">
+<header
+  #header
+  class="fixed top-0 flex items-center px-20 py-5 text-white transition-all z-50 shadow"
+>
   <a href="" class="w-[900px] h-[130px] transition-all">
-       <img class="object-cover" src="../../assets/Logo/logo.png">
-   </a>
-   <nav class="w-full transition-all">
-<ul class="flex justify-evenly items-center">
-<li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>  
-<li class="cursor-pointer" routerLink="/servicesandtechnology">SERVICES AND TECHNOLOGY</li>  
-<li class="cursor-pointer" (click)="OurClients()" routerLink="/">OUR CLIENTS</li> 
-<li class="cursor-pointer" routerLink="/iot">IoT</li> 
-<li class="cursor-pointer" routerLink="/contact">CONTACT</li> 
-</ul>
-   </nav>
+    <img class="object-cover" src="../../assets/Logo/logo.png" />
+  </a>
+  <nav class="w-full transition-all">
+    <ul class="flex justify-evenly items-center">
+      <li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>
+      <li class="cursor-pointer" routerLink="/servicesandtechnology">
+        SERVICES AND TECHNOLOGY
+      </li>
+      <li class="cursor-pointer" (click)="OurClients()" routerLink="/">
+        OUR CLIENTS
+      </li>
+      <li class="cursor-pointer" routerLink="/iot">IoT</li>
+      <li class="cursor-pointer" routerLink="/contact">CONTACT</li>
+    </ul>
+  </nav>
 </header>
 <!--HeroImage-->
 <div
   class="w-full h-[100vh] flex flex-col justify-evenly items-center pt-40"
   style="
-    background: url(../../assets/Banner/banner-revised.jpg) no-repeat
-      center;
+    background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
     background-size: cover;
   "
 >
@@ -26,7 +32,9 @@
   <a href="#Contact"
     ><img class="w-[200px] h-[133px]" src="../../assets/Banner/button.png"
   /></a>
-  <a href="#About"><img class="w-10 h-10" src="../../assets/Icons/down-arrow (1).png" /></a>
+  <a href="#About"
+    ><img class="w-10 h-10" src="../../assets/Icons/down-arrow (1).png"
+  /></a>
 </div>
 <!--About-Company-->
 <div id="About" class="px-20 py-10">
@@ -43,7 +51,8 @@
         450 environmental engineering projects, for a wide range of sizes and
         applications.
       </p>
-      <button routerLink="/aboutus"
+      <button
+        routerLink="/aboutus"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold text-white"
       >
         Know more
@@ -65,7 +74,8 @@
         service of environmental projects.
       </p>
       <div class="w-[75%]">
-        <button routerLink="/aboutus"
+        <button
+          routerLink="/aboutus"
           class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold text-white"
         >
           Know more
@@ -85,52 +95,68 @@
 >
   <h3 class="font-bold text-3xl mb-10">SERVICES</h3>
   <div class="flex gap-3">
-    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
+    <div
+      class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
+    >
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-1-400x400.png"
       />
       <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
-      <button  routerLink="/servicesandtechnology/wastewaterandsewage"
+      <button
+        routerLink="/servicesandtechnology/wastewaterandsewage"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
+    <div
+      class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
+    >
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-2-400x400.png"
       />
       <div class="text-center">Water Treatment Systems.</div>
-      <button routerLink="/servicesandtechnology/watertreatmentsystems"
+      <button
+        routerLink="/servicesandtechnology/watertreatmentsystems"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
+    <div
+      class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
+    >
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-3-400x400.png"
       />
-      <div class="text-center">Solid Waste Management Systems: Incineration.</div>
-      <button routerLink="/servicesandtechnology/solidwastemanagement"
+      <div class="text-center">
+        Solid Waste Management Systems: Incineration.
+      </div>
+      <button
+        routerLink="/servicesandtechnology/solidwastemanagement"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <div class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]">
+    <div
+      class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
+    >
       <img
         class="w-[150px] h-[150px]"
         src="../../assets/Icons/icon-4w-400x400.png"
       />
-      <div class="text-center">Bio-Augmentation of Lakes,Ponds, Rivers and Rivulets</div>
-      <button routerLink="/servicesandtechnology/bioaugmentation"
+      <div class="text-center">
+        Bio-Augmentation of Lakes,Ponds, Rivers and Rivulets
+      </div>
+      <button
+        routerLink="/servicesandtechnology/bioaugmentation"
         class="flex items-center justify-center px-2 py-1 rounded-md bg-green-500 text-sm font-bold"
       >
         Know more
@@ -140,7 +166,8 @@
   </div>
 </div>
 <!--Our-clients-->
-<div id="OurClients"
+<div
+  id="OurClients"
   class="w-full h-[696px] flex flex-col items-center text-white p-20"
   style="
     background: url(../../assets/Banner/banner-3.jpg) no-repeat center;
@@ -150,41 +177,66 @@
   <h4 class="font-bold text-3xl">OUR CLIENTS</h4>
 </div>
 <!--Contact-->
-<div id="Contact" class="w-full flex flex-col text-white p-20"
-style="
-  background: url(../../assets/Banner/contac-us-revised.jpg) no-repeat center;
-  background-size: cover;
-">
+<div
+  id="Contact"
+  class="w-full flex flex-col text-white p-20"
+  style="
+    background: url(../../assets/Banner/contac-us-revised.jpg) no-repeat center;
+    background-size: cover;
+  "
+>
   <h4 class="font-bold text-3xl self-center">CONTACT</h4>
   <div>
-<div class="text-2xl my-10 flex justify-center">FILL IN THE FORM BELOW AND WE WILL GET IN TOUCH TO FULFIL YOUR BUSINESS REQUIREMENT</div>
-<form class="flex flex-col w-full gap-10">
-    <div class="flex w-full gap-5">
-  <div class="w-[50%] flex flex-col gap-5">
- <div class="flex w-full gap-5">
-    <div class="w-full">
-        <input class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2" placeholder="First Name">
-      </div> 
-      <div class="w-full">
-        <input class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2" placeholder="Last Name">
-      </div> 
- </div> 
- <div>
-    <input class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2" placeholder="Phone No">
-  </div>
-  <div>
-    <input class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2" placeholder="Email">
-  </div>
-</div>
-  <div class="w-[50%]">
-    <div>
-        <textarea class="h-[160px] w-full bg-white bg-opacity-20 rounded-lg border-2 p-2" placeholder="Comment or Message"></textarea>
-      </div> 
-  </div> 
-</div>
-  <button class="w-fit self-center px-[100px] bg-white text-blue-950 h-10 rounded-full">SEND MESSAGE</button>
-</form>
+    <div class="text-2xl my-10 flex justify-center">
+      FILL IN THE FORM BELOW AND WE WILL GET IN TOUCH TO FULFIL YOUR BUSINESS
+      REQUIREMENT
+    </div>
+    <form class="flex flex-col w-full gap-10">
+      <div class="flex w-full gap-5">
+        <div class="w-[50%] flex flex-col gap-5">
+          <div class="flex w-full gap-5">
+            <div class="w-full">
+              <input
+                class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="w-full">
+              <input
+                class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+                placeholder="Last Name"
+              />
+            </div>
+          </div>
+          <div>
+            <input
+              class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+              placeholder="Phone No"
+            />
+          </div>
+          <div>
+            <input
+              class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div class="w-[50%]">
+          <div>
+            <textarea
+              class="h-[160px] w-full bg-white bg-opacity-20 rounded-lg border-2 p-2"
+              placeholder="Comment or Message"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-fit self-center px-[100px] bg-white text-blue-950 h-10 rounded-full"
+      >
+        SEND MESSAGE
+      </button>
+    </form>
   </div>
 </div>
 <!--Footer-->
-<app-footer/>
+<app-footer />
