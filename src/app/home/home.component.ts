@@ -14,6 +14,9 @@ import {
 export class HomeComponent implements OnInit {
   scrollid: string | null = null;
   arrowIcons = document.querySelectorAll('.wrapper a');
+  carousel: any;
+  firstImg: any; 
+  firstImgWidth: any;
 
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
 
@@ -54,12 +57,11 @@ export class HomeComponent implements OnInit {
   nextSlides() {
     document.getElementById('slides')!.style.marginRight = '';
   }
-  carousel = document.querySelector('.carousel');
-  firstImg = this.carousel?.querySelectorAll('img')[0];
-
-  firstImgWidth = this.firstImg!.clientWidth + 14;
 
   modificationOfSlides() {
+    this.carousel = document.querySelector('.carousel');
+    this.firstImg = this.carousel?.querySelectorAll('img')[0];
+    this.firstImgWidth = this.firstImg!.clientWidth + 14;
     this.arrowIcons.forEach((icon) => {
       icon.addEventListener('click', () => {
         this.carousel!.scrollLeft +=
@@ -67,5 +69,4 @@ export class HomeComponent implements OnInit {
       });
     });
   }
-  
 }
