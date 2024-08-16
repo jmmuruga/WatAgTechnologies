@@ -25,11 +25,10 @@ export class HomeComponent implements OnInit {
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
     }
-    this.on = setInterval(() => {
+    this.on = setInterval(async () => {
       this.NextSlides(-372);
     }, 2000);
   }
-
   scrollToTableTop(scrlId: any) {
     const element = document.getElementById(scrlId);
     if (element) {
@@ -70,4 +69,12 @@ export class HomeComponent implements OnInit {
   clearInterval() {
     clearInterval(this.on);
   }
+  imageList: any[] = [
+    { id: 1, src: '../../assets/Logo/logo-1.jpg' },
+    { id: 2, src: '../../assets/Logo/logo-4.jpg' },
+    { id: 3, src: '../../assets/Logo/logo-5.jpg' },
+    { id: 4, src: '../../assets/Logo/logo-9.jpg' },
+  ];
+
+  repeatArray = Array(4);
 }

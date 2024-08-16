@@ -176,50 +176,37 @@
 >
   <h4 class="font-bold text-3xl">OUR CLIENTS</h4>
   <div class="flex justify-center items-center gap-10">
-    <a id="Left" (click)="NextSlides(372);clearInterval()" class="p-2 rounded-full bg-black"
+    <a
+      id="Left"
+      (click)="NextSlides(372); clearInterval()"
+      class="p-2 rounded-full bg-black"
       ><img
         class="w-7 h-7 cursor-pointer -rotate-180"
         src="../../assets/Icons/right-arrow.png"
     /></a>
     <div class="wrapper overflow-hidden max-w-[1200px]">
-      <div class="overflow-hidden" >
-        <div id="Carousel" class="flex gap-[122px] max-w-[4000px] w-[1000px] transition-all duration-1000 translate-x-[-2600px]">
-        <!--1-->
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
-        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
-      </div>
+      <div class="overflow-hidden">
+        <div
+          id="Carousel"
+          class="flex gap-[122px] max-w-[4000px] w-[1000px] transition-all duration-1000 translate-x-[-2600px]"
+        >
+          <ng-container *ngFor="let repeat of repeatArray">
+            <ng-container *ngFor="let img of imageList">
+              <img class="h-[250px] w-[250px] object-cover" [src]="img.src" />
+            </ng-container>
+          </ng-container>
+        </div>
       </div>
     </div>
-    <a id="Right" (click)="NextSlides(-372)" class="p-2 rounded-full bg-black"
+    <a
+      id="Right"
+      (click)="NextSlides(-372); clearInterval()"
+      class="p-2 rounded-full bg-black"
       ><img
         class="w-7 h-7 cursor-pointer"
         src="../../assets/Icons/right-arrow.png"
     /></a>
   </div>
-  <!-- <div class="flex justify-between items-center gap-10 m-5 p-5">
-    <a class="p-2 rounded-full bg-black"><img  class="w-7 h-7 cursor-pointer -rotate-180" src="../../assets/Icons/right-arrow.png"></a>
-    <div id="slides" class="h-[400px] w-[100%] flex gap-[112px] items-center justify-between overflow-hidden">
-<img class="w-[25%] h-[252px]" src="../../assets/Logo/logo-1.jpg">
-<img class="w-[25%] h-[252px]" src="../../assets/Logo/logo-4.jpg">
-<img class="w-[25%] h-[252px]" src="../../assets/Logo/logo-5.jpg">
-<img class="w-[25%] h-[252px]" src="../../assets/Logo/logo-9.jpg">
-    </div>
-    <a class="p-2 rounded-full bg-black" (click)="nextSlides()"><img  class="w-7 h-7 cursor-pointer" src="../../assets/Icons/right-arrow.png"></a>
-  </div> -->
 </div>
 <!--Contact-->
 <div
