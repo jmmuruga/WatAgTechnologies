@@ -15,9 +15,9 @@ export class HomeComponent implements OnInit {
   scrollid: string | null = null;
   arrowIcons = document.querySelectorAll('.wrapper a');
   carousel: any;
-  firstImg: any; 
+  firstImg: any;
   firstImgWidth: any;
-
+  on: any;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
 
   ngOnInit() {
@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
     }
+    this.on = setInterval(() => {
+      this.NextSlides(-372);
+    }, 2000);
   }
 
   scrollToTableTop(scrlId: any) {
@@ -37,36 +40,34 @@ export class HomeComponent implements OnInit {
     }
     localStorage.removeItem('scrlid');
   }
-
   @ViewChild('header') myElement!: ElementRef;
   @HostListener('window:scroll', [])
   onScroll(): void {
     if (window.scrollY > 0) {
       this.myElement.nativeElement.classList.add('headerSize');
-      // this.logo=this.alternateLogo;
     } else {
       this.myElement.nativeElement.classList.remove('headerSize');
-      // this.logo='../../assets/Logo/logo.png';
     }
   }
-  // logo='../../assets/Logo/logo.png'
-  // alternateLogo='../../assets/Logo/logogreensolutionsindia-1-e1658147079576.png'
   OurClients() {
     this.scrollToTableTop('OurClients');
   }
-  nextSlides() {
-    document.getElementById('slides')!.style.marginRight = '';
+  slideLen: number = -2600;
+  NextSlides(num: number) {
+    debugger;
+    this.PlusSlides((this.slideLen += num));
   }
-
-  modificationOfSlides() {
-    this.carousel = document.querySelector('.carousel');
-    this.firstImg = this.carousel?.querySelectorAll('img')[0];
-    this.firstImgWidth = this.firstImg!.clientWidth + 14;
-    this.arrowIcons.forEach((icon) => {
-      icon.addEventListener('click', () => {
-        this.carousel!.scrollLeft +=
-          icon.id == 'left' ? -this.firstImgWidth : this.firstImgWidth;
-      });
-    });
+  PlusSlides(x: number) {
+    debugger;
+    this.carousel = document.getElementById('Carousel');
+    if ((x < 0 && x < -4600) || x > 0) {
+      this.carousel.style.transform = 'translate3d(-2600px,0px,0px)';
+      this.slideLen = -2600;
+    } else {
+      this.carousel.style.transform = `translate3d(${x}px,0px,0px)`;
+    }
+  }
+  clearInterval() {
+    clearInterval(this.on);
   }
 }

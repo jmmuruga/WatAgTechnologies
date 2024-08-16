@@ -76,7 +76,7 @@
       <div class="w-[75%]">
         <button
           routerLink="/aboutus"
-          class="flex items-center justify-center pl-2 font-medium  py-1 rounded-md bg-green-500 text-sm text-white"
+          class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm text-white"
         >
           Know more
           <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -105,7 +105,7 @@
       <div class="text-center">Waste Water and Sewage Treatment Systems.</div>
       <button
         routerLink="/servicesandtechnology/wastewaterandsewage"
-        class="flex items-center justify-center pl-2 font-medium  py-1 rounded-md bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -171,22 +171,45 @@
   class="w-full h-[696px] flex flex-col items-center gap-20 text-white p-20"
   style="
     background: url(../../assets/Banner/banner-3.jpg) no-repeat center;
-    background-size: cover; 
+    background-size: cover;
   "
 >
   <h4 class="font-bold text-3xl">OUR CLIENTS</h4>
-  <div class="flex justify-center items-center">
-  <a id="Left" class="p-2 rounded-full bg-black"><img  class="w-7 h-7 cursor-pointer -rotate-180" src="../../assets/Icons/right-arrow.png"></a>
-  <div class="wrapper">
-<div class="carousel">
-  <img class="" src="../../assets/Logo/logo-1.jpg">
-  <img class="" src="../../assets/Logo/logo-4.jpg">
-  <img class="" src="../../assets/Logo/logo-5.jpg">
-  <img class="" src="../../assets/Logo/logo-9.jpg">
-</div>
+  <div class="flex justify-center items-center gap-10">
+    <a id="Left" (click)="NextSlides(372);clearInterval()" class="p-2 rounded-full bg-black"
+      ><img
+        class="w-7 h-7 cursor-pointer -rotate-180"
+        src="../../assets/Icons/right-arrow.png"
+    /></a>
+    <div class="wrapper overflow-hidden max-w-[1200px]">
+      <div class="overflow-hidden" >
+        <div id="Carousel" class="flex gap-[122px] max-w-[4000px] w-[1000px] transition-all duration-1000 translate-x-[-2600px]">
+        <!--1-->
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-1.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-4.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-5.jpg" />
+        <img class="h-[250px] w-[250px] object-cover" src="../../assets/Logo/logo-9.jpg" />
+      </div>
+      </div>
+    </div>
+    <a id="Right" (click)="NextSlides(-372)" class="p-2 rounded-full bg-black"
+      ><img
+        class="w-7 h-7 cursor-pointer"
+        src="../../assets/Icons/right-arrow.png"
+    /></a>
   </div>
-  <a id="Right" class="p-2 rounded-full bg-black"><img  class="w-7 h-7 cursor-pointer" src="../../assets/Icons/right-arrow.png"></a>
-</div>
   <!-- <div class="flex justify-between items-center gap-10 m-5 p-5">
     <a class="p-2 rounded-full bg-black"><img  class="w-7 h-7 cursor-pointer -rotate-180" src="../../assets/Icons/right-arrow.png"></a>
     <div id="slides" class="h-[400px] w-[100%] flex gap-[112px] items-center justify-between overflow-hidden">

@@ -16,21 +16,6 @@
         background-color: white;
         justify-content: space-between;
     }
-    .wrapper {
-      max-width:1200px;
-    }
-    .wrapper .carousel {
-      display: flex;
-      white-space: nowrap;
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .carousel img{
-      height:340px;
-      object-fit: cover;
-      width:calc(100%/3);
-      margin-left: 14px;
-    }
-    .carousel img:first-child{
-    margin-right: 0px;
-    }
+    /* else if (x > 0 && x > 3384 || x > 0 && x > -3384 ) {
+        this.carousel.style.transform = "translate3d(-2600px,0px,0px)";
+       } */
