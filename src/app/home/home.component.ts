@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   carousel: any;
   firstImg: any;
   firstImgWidth: any;
-  on: any;
+  autoSlide: any;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
 
   ngOnInit() {
@@ -25,10 +25,12 @@ export class HomeComponent implements OnInit {
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
     }
-    this.on = setInterval(async () => {
+    this.autoSlide = setInterval( () => {
       this.NextSlides(-372);
-    }, 2000);
+    }, 5000);
+    setInterval(()=>{this.trackCenterImage()}, 1000); 
   }
+
   scrollToTableTop(scrlId: any) {
     const element = document.getElementById(scrlId);
     if (element) {
@@ -67,7 +69,7 @@ export class HomeComponent implements OnInit {
     }
   }
   clearInterval() {
-    clearInterval(this.on);
+    clearInterval(this.autoSlide);
   }
   imageList: any[] = [
     { id: 1, src: '../../assets/Logo/logo-1.jpg' },
@@ -77,4 +79,38 @@ export class HomeComponent implements OnInit {
   ];
 
   repeatArray = Array(4);
+
+
+
+  
+  images:any = document.querySelectorAll('.slideImages');
+  containerWidth:number = (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
+  // Function to find the image in the center
+   trackCenterImage() {
+    debugger
+    const centerPosition = this.containerWidth / 2;
+    this.images.forEach((img:any) => {
+      const imgRect = img.getBoundingClientRect();
+      const imgCenter = imgRect.left + imgRect.width / 2;
+      // Check if image center is closest to the container center
+      if (Math.abs(imgCenter - centerPosition) < imgRect.width / 2) {
+        img.style.transform="scale(2)"
+      } else {
+         img.style.transform="scale(2)"
+      }
+    });
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

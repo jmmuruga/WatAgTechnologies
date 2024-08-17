@@ -1,14 +1,47 @@
-<header #header class="sticky top-0 flex items-center px-20 text-black transition-all z-50 shadow bg-white">
-   <a href="" class="w-[800px] h-[130px] transition-all">
-        <img class="object-cover" src="../../assets/Logo/logo.png">
-    </a>
-    <nav class="w-full transition-all">
-<ul class="flex justify-evenly items-center">
- <li class="cursor-pointer hover:text-green-500 text-sm" routerLink="/aboutus">ABOUT US</li>  
- <li class="cursor-pointer hover:text-green-500 text-sm" routerLink="/servicesandtechnology">SERVICES AND TECHNOLOGY</li>  
- <li class="cursor-pointer hover:text-green-500 text-sm" (click)="OurClients()" routerLink="/">OUR CLIENTS</li> 
- <li class="cursor-pointer hover:text-green-500 text-sm" routerLink="/iot">IoT</li> 
- <li class="cursor-pointer hover:text-green-500 text-sm" routerLink="/contact">CONTACT</li> 
-</ul>
-    </nav>
+<header
+  #header
+  class="sticky top-0 flex items-center px-20 text-black transition-all z-50 shadow bg-white"
+>
+  <a href="" class="w-[800px] h-[130px] transition-all">
+    <img class="object-cover" src="../../assets/Logo/logo.png" />
+  </a>
+  <nav class="w-full transition-all">
+    <ul class="flex justify-evenly items-center">
+      <li
+        class="cursor-pointer hover:text-green-500 text-sm"
+        routerLink="/aboutus"
+        routerLinkActive="activeheader"
+      >
+        ABOUT US
+      </li>
+      <li
+        class="cursor-pointer hover:text-green-500 text-sm"
+        routerLink="/servicesandtechnology"
+        routerLinkActive="activeheader"
+      >
+        SERVICES AND TECHNOLOGY
+      </li>
+      <li
+        class="cursor-pointer hover:text-green-500 text-sm"
+        (click)="OurClients()"
+        routerLink="/"
+      >
+        OUR CLIENTS
+      </li>
+      <li
+        class="cursor-pointer hover:text-green-500 text-sm"
+        routerLink="/iot"
+        routerLinkActive="activeheader"
+      >
+        IoT
+      </li>
+      <li
+        class="cursor-pointer hover:text-green-500 text-sm"
+        routerLink="/contact"
+        routerLinkActive="activeheader"
+      >
+        CONTACT
+      </li>
+    </ul>
+  </nav>
 </header>
