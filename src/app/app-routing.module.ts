@@ -22,7 +22,6 @@ const routes: Routes = [
   { path: 'servicesandtechnology/solidwastemanagement', component: SolidWasteManagementComponent },
   { path: 'servicesandtechnology/bioaugmentation', component: BioAugmentationComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

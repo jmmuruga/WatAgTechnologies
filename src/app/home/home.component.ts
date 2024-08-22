@@ -25,10 +25,12 @@ export class HomeComponent implements OnInit {
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
     }
-    this.autoSlide = setInterval( () => {
+    this.autoSlide = setInterval(() => {
       this.NextSlides(-372);
     }, 5000);
-    setInterval(()=>{this.trackCenterImage()}, 1000); 
+    setInterval(() => {
+      this.trackCenterImage();
+    }, 0);
   }
 
   scrollToTableTop(scrlId: any) {
@@ -42,6 +44,8 @@ export class HomeComponent implements OnInit {
     localStorage.removeItem('scrlid');
   }
   @ViewChild('header') myElement!: ElementRef;
+  @ViewChild('slideImages') slideImages!: ElementRef;
+
   @HostListener('window:scroll', [])
   onScroll(): void {
     if (window.scrollY > 0) {
@@ -55,11 +59,9 @@ export class HomeComponent implements OnInit {
   }
   slideLen: number = -2600;
   NextSlides(num: number) {
-    debugger;
     this.PlusSlides((this.slideLen += num));
   }
   PlusSlides(x: number) {
-    debugger;
     this.carousel = document.getElementById('Carousel');
     if ((x < 0 && x < -4600) || x > 0) {
       this.carousel.style.transform = 'translate3d(-2600px,0px,0px)';
@@ -79,38 +81,42 @@ export class HomeComponent implements OnInit {
   ];
 
   repeatArray = Array(4);
+  images: any;
+  containerWidth: number = 0;
+  zoomedInImage: any = null;
 
+  ngAfterViewInit() {
+    this.images = document.querySelectorAll('.slideImages');
+    this.containerWidth =
+      (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
+    this.trackCenterImage();
 
+    setInterval(() => this.trackCenterImage(), 100);
+  }
 
-  
-  images:any = document.querySelectorAll('.slideImages');
-  containerWidth:number = (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
-  // Function to find the image in the center
-   trackCenterImage() {
-    debugger
+  trackCenterImage() {
+    debugger;
     const centerPosition = this.containerWidth / 2;
-    this.images.forEach((img:any) => {
+    this.images.forEach((img: any) => {
       const imgRect = img.getBoundingClientRect();
       const imgCenter = imgRect.left + imgRect.width / 2;
-      // Check if image center is closest to the container center
       if (Math.abs(imgCenter - centerPosition) < imgRect.width / 2) {
-        img.style.transform="scale(2)"
-      } else {
-         img.style.transform="scale(2)"
+        if (this.zoomedInImage !== img) {
+          this.resetZoom();
+          img.style.opacity = '1';
+          img.style.transition = 'transform 0.5s ease';
+          img.style.transform = 'scale(1.5)';
+          this.zoomedInImage = img;
+        }
       }
     });
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
+  resetZoom() {
+    if (this.zoomedInImage) {
+      this.zoomedInImage.style.opacity = '0.5';
+      this.zoomedInImage.style.transition = 'transform 0.5s ease';
+      this.zoomedInImage.style.transform = 'scale(1)';
+      this.zoomedInImage = null;
+    }
+  }
 }

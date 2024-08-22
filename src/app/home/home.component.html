@@ -188,14 +188,16 @@
       <div class="overflow-hidden">
         <div
           id="Carousel"
-          class="flex gap-[122px] max-w-[4000px] w-[1000px] transition-all duration-1000 translate-x-[-2600px]"
+          class="flex items-center gap-[122px] max-w-[4000px] w-[1000px] h-[400px] transition-all duration-1000 translate-x-[-2600px]"
         >
           <ng-container *ngFor="let repeat of repeatArray">
             <ng-container *ngFor="let img of imageList">
-              <img class="slideImages h-[250px] w-[250px] object-cover" [src]="img.src" />
+              <img class="slideImages h-[250px] w-[250px] object-cover transition-all opacity-50" [src]="img.src"/>
             </ng-container>
           </ng-container>
-        </div>
+        </div>  
+
+
       </div>
     </div>
     <a
