@@ -4,7 +4,7 @@
   class="fixed top-0 flex items-center px-20 text-white transition-all z-50 shadow"
 >
   <a href="" class="w-[800px] h-[130px] transition-all">
-    <img class="object-cover" src="../../assets/Logo/logo.png" />
+    <img class="object-cover" src="../../assets/Logo/companylogo.png" />
   </a>
   <nav class="w-full transition-all">
     <ul class="flex justify-evenly items-center">
@@ -190,7 +190,7 @@
           <ng-container *ngFor="let repeat of repeatArray">
             <ng-container *ngFor="let img of imageList">
               <img
-                class="slideImages h-[250px] w-[250px] object-cover transition-all opacity-50"
+                class="slideImages h-[250px] w-[250px] object-fill transition-all opacity-50"
                 [src]="img.src"
               />
             </ng-container>

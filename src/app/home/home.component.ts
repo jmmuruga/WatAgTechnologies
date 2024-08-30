@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,10 @@ export class HomeComponent implements OnInit {
   firstImgWidth: any;
   autoSlide: any;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
+
+  constructor(private cdr: ChangeDetectorRef) {
+    
+  }
 
   ngOnInit() {
     this.scrollid = localStorage.getItem('scrlid');
@@ -74,10 +79,15 @@ export class HomeComponent implements OnInit {
     clearInterval(this.autoSlide);
   }
   imageList: any[] = [
-    { id: 1, src: '../../assets/Logo/logo-1.jpg' },
-    { id: 2, src: '../../assets/Logo/logo-4.jpg' },
-    { id: 3, src: '../../assets/Logo/logo-5.jpg' },
-    { id: 4, src: '../../assets/Logo/logo-9.jpg' },
+    { id: 1, src: '../../assets/Logo/logo1.jpg' },
+    { id: 2, src: '../../assets/Logo/logo2.jpg' },
+    { id: 3, src: '../../assets/Logo/logo3.jpg' },
+    { id: 4, src: '../../assets/Logo/logo4.jpg' },
+    { id: 5, src: '../../assets/Logo/logo5.jpg' },
+    { id: 6, src: '../../assets/Logo/logo6.jpg' },
+    { id: 7, src: '../../assets/Logo/logo7.jpg' },
+    { id: 8, src: '../../assets/Logo/logo8.jpg' },
+    { id: 9, src: '../../assets/Logo/logo9.jpg' },
   ];
 
   repeatArray = Array(4);
@@ -92,10 +102,11 @@ export class HomeComponent implements OnInit {
     this.trackCenterImage();
 
     setInterval(() => this.trackCenterImage(), 100);
+    this.cdr.detectChanges(); // Manually trigger change detection
   }
 
   trackCenterImage() {
-    debugger;
+
     const centerPosition = this.containerWidth / 2;
     this.images.forEach((img: any) => {
       const imgRect = img.getBoundingClientRect();
