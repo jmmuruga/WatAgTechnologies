@@ -15,6 +15,9 @@ import { WaterTreatmentSystemsComponent } from './services-and-technology/water-
 import { SolidWasteManagementComponent } from './services-and-technology/solid-waste-management/solid-waste-management.component';
 import { BioAugmentationComponent } from './services-and-technology/bio-augmentation/bio-augmentation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ImgPopupComponent } from './img-popup/img-popup.component';
+import { MatDialogModule } from '@angular/material/dialog'; // Import MatDialogModule
+import { DialogService } from './dialog.service';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WasteWaterAndSewageComponent,
     WaterTreatmentSystemsComponent,
     SolidWasteManagementComponent,
-    BioAugmentationComponent
+    BioAugmentationComponent,
+    ImgPopupComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatDialogModule, // Add MatDialogModule here
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DialogService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
