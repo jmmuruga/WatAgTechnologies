@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-iot',
-  templateUrl: './iot.component.html',
-  styleUrls: ['./iot.component.css'],
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.css'],
 })
 export class IotComponent implements OnInit {
   isShowBlockDiagram: boolean = false;

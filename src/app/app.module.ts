@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesAndTechnologyComponent } from './services-and-technology/services-and-technology.component';
-import { IotComponent } from './iot/iot.component';
+import { IotComponent } from './Gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { WasteWaterAndSewageComponent } from './services-and-technology/waste-water-and-sewage/waste-water-and-sewage.component';
 import { WaterTreatmentSystemsComponent } from './services-and-technology/water-treatment-systems/water-treatment-systems.component';

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IotComponent } from './iot.component';
+import { IotComponent } from './gallery.component';
 
 describe('IotComponent', () => {
   let component: IotComponent;
