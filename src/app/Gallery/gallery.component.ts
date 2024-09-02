@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { DialogService } from '../dialog.service';
 
 @Component({
   selector: 'app-iot',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
 })
-export class IotComponent implements OnInit {
+export class GalleryComponent implements OnInit {
   // isShowBlockDiagram: boolean = false;
   // isShowDashboard: boolean = false;
   // isShowSignal: boolean = false;
-  constructor(private dialogService: DialogService) {}
+ 
   ngOnInit(): void {
     // this.openTab(1);
   }
@@ -30,9 +29,4 @@ export class IotComponent implements OnInit {
   //   }
   // }
 
-  openDialog() {
-    this.dialogService.openConfirmDialog('Are you sure you want to proceed?').afterClosed().subscribe((result) => {
-      console.log('Dialog closed with result:', result);
-    });
-  }
 }

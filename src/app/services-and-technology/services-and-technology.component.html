@@ -1,4 +1,4 @@
-<app-header/>
+<app-header />
 <div>
   <!--Banner-->
   <div
@@ -20,13 +20,13 @@
   </div>
   <!--Our-Services-->
   <div class="flex flex-col items-center gap-5 p-20">
-    <div class="w-full flex justify-start mb-10 mr-6">
-      <div class="text-2xl">
+    <div class="w-full flex justify-center mb-10 mr-6">
+      <div class="text-2xl flex justify-center">
         <span class="text-green-500 mr-2">OUR</span
         ><span class="font-bold">SERVICES</span>
       </div>
     </div>
-    <div class="flex justify-between w-full">
+    <div class="flex flex-wrap justify-center gap-20 w-full">
       <div
         (mouseover)="ServicesOver('Img1', 0)"
         (mouseout)="ServicesOut('Img1', 0)"
@@ -64,9 +64,7 @@
           class="w-[130px] h-[130px]"
           src="../../assets/Icons/icon-3b.png"
         />
-        <div class="text-center">
-          Solid Waste Management Systems
-        </div>
+        <div class="text-center">Solid Waste Management Systems</div>
       </div>
       <div
         (mouseover)="ServicesOver('Img4', 3)"
@@ -79,10 +77,34 @@
           class="w-[130px] h-[130px]"
           src="../../assets/Icons/icon-4b.png"
         />
-        <div class="text-center">
-          Product and Spare Parts Supply
-        </div>
+        <div class="text-center">Product and Spare Parts Supply</div>
       </div>
+      <div
+      (mouseover)="ServicesOver('Img5', 4)"
+      (mouseout)="ServicesOut('Img5', 4)"
+      routerLink="/servicesandtechnology/environmentalconsultingservice"
+      class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
+    >
+      <img
+        id="Img5"
+        class="w-[130px] h-[130px]"
+        src="../../assets/Icons/icon-4b.png"
+      />
+      <div class="text-center">Environmental Consulting Service</div>
+    </div>
+    <div
+    (mouseover)="ServicesOver('Img6', 5)"
+    (mouseout)="ServicesOut('Img6', 5)"
+    routerLink="/servicesandtechnology/annualmaintainancecomponent"
+    class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
+  >
+    <img
+      id="Img6"
+      class="w-[130px] h-[130px]"
+      src="../../assets/Icons/icon-4b.png"
+    />
+    <div class="text-center">Annual Maintainance</div>
+  </div>
     </div>
   </div>
   <!--The-Uniqueness-Of-Our-Services-->
@@ -98,62 +120,51 @@
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
           <p>
-            Fully customizable engineering designs to suit individual customer
-            needs
+            We are specialist in designing the Treatment plant as per the
+            customer requirements.
           </p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
           <p>
-            Service back up of all our plants within 48 hours all over india.
+            We are having well trained technicians to solve the problems of the
+            plant.
           </p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>Underground/Overground designs based on site terrain.</p>
+          <p>
+            We are having well educated desgning engineers to design STP,ETP,WTP
+          </p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>Complete training to personnel on the operation of our plants.</p>
+          <p>24x7 service facility available for our plants.</p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
           <p>
-            All mechanical parts like pumps, blowers etc. can be removed from
-            the plants without the need for human entry into sewage tanks.
+            Available all the spares and equipment related to our projects and
+            works.
           </p>
         </div>
       </div>
       <div class="flex flex-col gap-3">
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Electrical panel boards ensure automated operation of equipment.
-          </p>
+          <p>Our plant installation and commissioning always trouble free.</p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Service offered on all pumps, blowers and other major equipment
-            including warranty.
-          </p>
+          <p>Our plants problems will be attended within 36 hours.</p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Internet controlled management and maintenance can be offered based
-            on the customer’s needs & requirements.
-          </p>
+          <p>Our designed and installed plants are easily serviceable</p>
         </div>
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Calculations provided for estimated electricity consumption charges.
-          </p>
-        </div>
-        <div class="flex gap-3">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>Trouble free installation and commissioning of plants.</p>
+          <p>Specialist in underground and above the ground plant designing.</p>
         </div>
       </div>
     </div>
@@ -222,4 +233,4 @@
   </div>
 </div>
 <!--Footer-->
-<app-footer/>
+<app-footer />
