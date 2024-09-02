@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./bio-augmentation.component.css']
 })
 export class BioAugmentationComponent {
-
+  scrollToTableTop(scrlId: any) {
+    const element = document.getElementById(scrlId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+}
 }

@@ -18,4 +18,14 @@ ServicesOut(element:string,src:number){
   img.src = this.serviceImages2[src];
 }
 
+scrollToTableTop(scrlId: any) {
+  const element = document.getElementById(scrlId);
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
+
+}
 }

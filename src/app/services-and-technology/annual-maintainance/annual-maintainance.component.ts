@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./annual-maintainance.component.css']
 })
 export class AnnualMaintainanceComponent {
-
+  scrollToTableTop(scrlId: any) {
+    const element = document.getElementById(scrlId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+}
 }

@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./waste-water-and-sewage.component.css']
 })
 export class WasteWaterAndSewageComponent {
-
+  scrollToTableTop(scrlId: any) {
+    const element = document.getElementById(scrlId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+}
 }

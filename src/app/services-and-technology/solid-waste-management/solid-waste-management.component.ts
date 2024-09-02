@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./solid-waste-management.component.css']
 })
 export class SolidWasteManagementComponent {
-
+  scrollToTableTop(scrlId: any) {
+    const element = document.getElementById(scrlId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+}
 }

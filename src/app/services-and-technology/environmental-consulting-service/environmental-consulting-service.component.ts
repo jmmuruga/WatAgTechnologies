@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./environmental-consulting-service.component.css']
 })
 export class EnvironmentalConsultingServiceComponent {
-
+  scrollToTableTop(scrlId: any) {
+    const element = document.getElementById(scrlId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+}
 }
