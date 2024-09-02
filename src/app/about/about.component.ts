@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  scrollToTableTop(scrlId: any) {
+    const element = document.getElementById(scrlId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  
+  }
 }

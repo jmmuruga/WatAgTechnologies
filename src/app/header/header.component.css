@@ -10,6 +10,7 @@
   transition: 0.4s;
   background-color: white;
   justify-content: space-between;
+  z-index: 999 !important;
 }
 li:after {
   display: flex;
