@@ -17,7 +17,6 @@ ServicesOut(element:string,src:number){
   const img = document.getElementById(element) as HTMLImageElement;
   img.src = this.serviceImages2[src];
 }
-
 scrollToTableTop(scrlId: any) {
   const element = document.getElementById(scrlId);
   if (element) {
@@ -28,4 +27,13 @@ scrollToTableTop(scrlId: any) {
   }
 
 }
+services = [
+  {id:1,src:'../../assets/Icons/waterandsewage.png',name:'Waste Water and Sewage Treatment Systems'},
+  {id:2,src:'../../assets/Icons/waterTreatmentProcess-removebg-preview (1).png',name:'Water Treatment Systems'},
+  {id:3,src:'../../assets/Icons/wasteManagement.png',name:'Solid Waste Management Systems'},
+  {id:4,src:'../../assets/Icons/spareparts.png',name:'Product and Spare Parts Supply'},
+  {id:5,src:'../../assets/Icons/environmental-removebg-preview.png',name:'Environmental Consulting Service'},
+  {id:6,src:'../../assets/Icons/serviceMaintainance-removebg-preview.png',name:'Annual Maintainance'},
+]
+
 }

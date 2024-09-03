@@ -28,85 +28,20 @@
         ><span class="font-bold">SERVICES</span>
       </div>
     </div>
-    <div class="flex flex-wrap justify-center gap-20 w-full">
+    <div  class="flex flex-wrap justify-center gap-20 w-full">
+     <ng-container *ngFor="let service of services">
       <div
-        (mouseover)="ServicesOver('Img1', 0)"
-        (mouseout)="ServicesOut('Img1', 0)"
         routerLink="/servicesandtechnology/wastewaterandsewage"
         class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
       >
         <img
           id="Img1"
           class="w-[130px] h-[130px]"
-          src="../../assets/Icons/icon-1b.png"
+          [src]="service.src"
         />
-        <div class="text-center">Waste Water and Sewage Treatment Systems</div>
+        <div class="text-center">{{service.name}}</div>
       </div>
-      <div
-        (mouseover)="ServicesOver('Img2', 1)"
-        (mouseout)="ServicesOut('Img2', 1)"
-        routerLink="/servicesandtechnology/watertreatmentsystems"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
-      >
-        <img
-          id="Img2"
-          class="w-[130px] h-[130px]"
-          src="../../assets/Icons/icon-2b.png"
-        />
-        <div class="text-center">Water Treatment Systems</div>
-      </div>
-      <div
-        (mouseover)="ServicesOver('Img3', 2)"
-        (mouseout)="ServicesOut('Img3', 2)"
-        routerLink="/servicesandtechnology/solidwastemanagement"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
-      >
-        <img
-          id="Img3"
-          class="w-[130px] h-[130px]"
-          src="../../assets/Icons/icon-3b.png"
-        />
-        <div class="text-center">Solid Waste Management Systems</div>
-      </div>
-      <div
-        (mouseover)="ServicesOver('Img4', 3)"
-        (mouseout)="ServicesOut('Img4', 3)"
-        routerLink="/servicesandtechnology/bioaugmentation"
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
-      >
-        <img
-          id="Img4"
-          class="w-[130px] h-[130px]"
-          src="../../assets/Icons/icon-4b.png"
-        />
-        <div class="text-center">Product and Spare Parts Supply</div>
-      </div>
-      <div
-      (mouseover)="ServicesOver('Img5', 4)"
-      (mouseout)="ServicesOut('Img5', 4)"
-      routerLink="/servicesandtechnology/environmentalconsultingservice"
-      class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
-    >
-      <img
-        id="Img5"
-        class="w-[130px] h-[130px]"
-        src="../../assets/Icons/icon-4b.png"
-      />
-      <div class="text-center">Environmental Consulting Service</div>
-    </div>
-    <div
-    (mouseover)="ServicesOver('Img6', 5)"
-    (mouseout)="ServicesOut('Img6', 5)"
-    routerLink="/servicesandtechnology/annualmaintainancecomponent"
-    class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
-  >
-    <img
-      id="Img6"
-      class="w-[130px] h-[130px]"
-      src="../../assets/Icons/icon-4b.png"
-    />
-    <div class="text-center">Annual Maintainance</div>
-  </div>
+    </ng-container>
     </div>
   </div>
   <!--The-Uniqueness-Of-Our-Services-->

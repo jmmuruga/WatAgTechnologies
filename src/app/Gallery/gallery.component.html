@@ -1,8 +1,8 @@
 <!--Header-->
-<app-header/>
+<app-header />
 <!-- <div> -->
-  <!--Banner-->
-  <!-- <div
+<!--Banner-->
+<!-- <div
     class="w-full h-[420px] flex justify-center items-center"
     style="
       background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
@@ -14,8 +14,8 @@
       src="../../assets/Banner/iot-e1658121345612.png"
     />
   </div> -->
-  <!--Intro-of-iot-->
-  <!-- <div class="flex justify-center">
+<!--Intro-of-iot-->
+<!-- <div class="flex justify-center">
     <div class="w-[90%]">
       <div class="text-3xl my-12">
         <span class="font-bold mr-2">WELCOME TO THE</span
@@ -72,8 +72,8 @@
       </div>
     </div>
   </div> -->
-  <!--Table-view-->
-  <!-- <div class="flex justify-center py-20 bg-[#eeeeee]">
+<!--Table-view-->
+<!-- <div class="flex justify-center py-20 bg-[#eeeeee]">
     <div class="w-[90%] border border-stone-300">
       <div class="flex">
         <div
@@ -173,8 +173,8 @@
       </div>
     </div>
   </div> -->
-  <!--diagram-->
-  <!-- <div>
+<!--diagram-->
+<!-- <div>
     <div class="flex flex-col justify-center items-center">
       <img
         class="w-[1000px] h-[600px]"
@@ -277,8 +277,8 @@
       </div>
     </div>
   </div> -->
-  <!--Geographic-location-->
-  <!-- <div
+<!--Geographic-location-->
+<!-- <div
     class="w-full h-[270px] flex justify-center items-center"
     style="
       background: url(../../assets/Banner/geographic-location.jpg) no-repeat
@@ -329,8 +329,8 @@
       <img src="../../assets/Logo/BYTSCAPE-BROCHURE-V3.1-correction.png" />
     </div>
   </div> -->
-  <!--Contact-form-->
-  <!-- <div
+<!--Contact-form-->
+<!-- <div
     class="flex flex-col justify-center items-center align-center gap-5 bg-[#EEEEEE] py-10"
   >
     <h3 class="text-2xl">
@@ -384,105 +384,132 @@
     </div>
   </div> -->
 <!-- </div> -->
-  <!--Banner-->
+<!--Banner-->
+<div
+  class="w-full h-[400px] flex flex-col gap-10 justify-center items-center mt-[130px]"
+  style="
+    background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
+    background-size: cover;
+  "
+>
   <div
-    class="w-full h-[400px] flex flex-col gap-10 justify-center items-center mt-[130px]"
-    style="
-      background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
-      background-size: cover;
-    "
+    class="relative text-5xl text-center font-bold text-white px-16 py-10 border-2 border-white"
   >
-    <div
-      class="relative text-5xl text-center font-bold text-white px-16 py-10 border-2 border-white"
-    >
-      <div>Gallery</div>
-      <!-- <img
+    <div>Gallery</div>
+    <!-- <img
         class="w-[130px] h-[87px] absolute -top-12 -right-16"
         src="../../assets/Banner/button.png"
       /> -->
-    </div>
-    <div (click)="scrollToTableTop('GalleryPageContact')" class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-blue-600 text-white" >Get proposal</div>
-
   </div>
+  <div
+    (click)="scrollToTableTop('GalleryPageContact')"
+    class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-blue-600 text-white"
+  >
+    Get proposal
+  </div>
+</div>
 <!--gallery-->
 <div class="flex items-center justify-center">
-<div  class="grid grid-cols-3 py-20 w-fit gap-2">
-  <div *ngFor="let imgSrc of galleryPhotos">
-    <img (click)="PopUp(true,imgSrc)" class="cursor-pointer min-w-[200px] min-h-[200px] max-w-[200px] max-h-[200px] object-cover border rounded-lg" [src]="imgSrc"> 
+  <div class="grid grid-cols-3 py-20 w-fit gap-2">
+    <div *ngFor="let img of galleryPhotos">
+      <img
+        (click)="PopUp(true, img)"
+        class="cursor-pointer min-w-[200px] min-h-[200px] max-w-[200px] max-h-[200px] object-cover border rounded-lg"
+        [src]="img.src"
+      />
+    </div>
   </div>
- 
-</div>
 </div>
 <!--Contact-->
-<div id="GalleryPageContact"
-class="w-full flex flex-col text-white p-20"
-style="
-  background: url(../../assets/Banner/contac-us-revised.jpg) no-repeat
-    center;
-  background-size: cover;
-"
+<div
+  id="GalleryPageContact"
+  class="w-full flex flex-col text-white p-20"
+  style="
+    background: url(../../assets/Banner/contac-us-revised.jpg) no-repeat center;
+    background-size: cover;
+  "
 >
-<h4 class="font-bold text-3xl self-center">CONTACT</h4>
-<div>
-  <div class="text-2xl my-10 flex justify-center">
-    FILL IN THE FORM BELOW AND WE WILL GET IN TOUCH TO FULFIL YOUR BUSINESS
-    REQUIREMENT
-  </div>
-  <form class="flex flex-col w-full gap-10">
-    <div class="flex w-full gap-5">
-      <div class="w-[50%] flex flex-col gap-5">
-        <div class="flex w-full gap-5">
-          <div class="w-full">
-            <input
-              class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
-              placeholder="First Name"
-            />
-          </div>
-          <div class="w-full">
-            <input
-              class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
-              placeholder="Last Name"
-            />
-          </div>
-        </div>
-        <div>
-          <input
-            class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
-            placeholder="Phone No"
-          />
-        </div>
-        <div>
-          <input
-            class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
-            placeholder="Email"
-          />
-        </div>
-      </div>
-      <div class="w-[50%]">
-        <div>
-          <textarea
-            class="h-[160px] w-full bg-white bg-opacity-20 rounded-lg border-2 p-2"
-            placeholder="Comment or Message"
-          ></textarea>
-        </div>
-      </div>
+  <h4 class="font-bold text-3xl self-center">CONTACT</h4>
+  <div>
+    <div class="text-2xl my-10 flex justify-center">
+      FILL IN THE FORM BELOW AND WE WILL GET IN TOUCH TO FULFIL YOUR BUSINESS
+      REQUIREMENT
     </div>
-    <button
-      class="w-fit self-center px-[100px] bg-white text-blue-950 h-10 rounded-full"
-    >
-      SEND MESSAGE
-    </button>
-  </form>
-</div>
+    <form class="flex flex-col w-full gap-10">
+      <div class="flex w-full gap-5">
+        <div class="w-[50%] flex flex-col gap-5">
+          <div class="flex w-full gap-5">
+            <div class="w-full">
+              <input
+                class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+                placeholder="First Name"
+              />
+            </div>
+            <div class="w-full">
+              <input
+                class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+                placeholder="Last Name"
+              />
+            </div>
+          </div>
+          <div>
+            <input
+              class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+              placeholder="Phone No"
+            />
+          </div>
+          <div>
+            <input
+              class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div class="w-[50%]">
+          <div>
+            <textarea
+              class="h-[160px] w-full bg-white bg-opacity-20 rounded-lg border-2 p-2"
+              placeholder="Comment or Message"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-fit self-center px-[100px] bg-white text-blue-950 h-10 rounded-full"
+      >
+        SEND MESSAGE
+      </button>
+    </form>
+  </div>
 </div>
 <!--Footer-->
 <app-footer />
 
-
 <!--Popup-->
-<div *ngIf="this.popup" class="fixed top-0 flex h-[100vh] w-full bg-slate-500 justify-center items-center bg-opacity-80 z-50">
-  <div class="flex gap-5 w-full justify-center items-start">
-  <img id="ZoomInImg" class="h-[500px] rounded-lg object-contain shadow-2xl shadow-slate-950">
-  <img src="../../assets/Icons/icons8-close-100 (1).png" (click)="PopUp(false,'')" class="w-10 h-10 p-2 rounded-full bg-white cursor-pointer" title="close" >
-</div>
+<div
+  *ngIf="this.popup"
+  class="fixed top-0 flex h-[100vh] w-full bg-slate-500 justify-center items-center bg-opacity-80 z-50"
+>
+  <div class="flex gap-5 w-full justify-center items-center relative">
+    <img (click)="moveSlides('backward')"
+      class="cursor-pointer w-12 h-12 rotate-180 p-2 bg-white rounded"
+      src="../../assets/Icons/icons8-right-arrow-100.png"
+    />
+    <img
+      id="ZoomInImg"
+      class="h-[500px] w-[700px] rounded-lg shadow-2xl shadow-slate-950"
+      [src]="this.zoomImg?.src"
+    />
+    <img
+      (click)="moveSlides('forward')"
+      class="cursor-pointer w-12 h-12 p-2 bg-white rounded"
+      src="../../assets/Icons/icons8-right-arrow-100.png"
+    />
+    <img
+      src="../../assets/Icons/icons8-close-100 (1).png"
+      (click)="PopUp(false, '')"
+      class="absolute right-10 top-0 w-10 h-10 p-2 rounded-full bg-white cursor-pointer"
+      title="close"
+    />
+  </div>
 </div>
