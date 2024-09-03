@@ -21,9 +21,7 @@ export class HomeComponent implements OnInit {
   autoSlide: any;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
 
-  constructor(private cdr: ChangeDetectorRef) {
-    
-  }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.scrollid = localStorage.getItem('scrlid');
@@ -90,6 +88,45 @@ export class HomeComponent implements OnInit {
     { id: 9, src: '../../assets/Logo/logo9.jpg' },
   ];
 
+  services = [
+    {
+      id: 1,
+      src: '../../assets/Icons/waterandsewage.png',
+      name: 'Waste Water and Sewage Treatment Systems',
+      link:'/servicesandtechnology/wastewaterandsewage'
+    },
+    {
+      id: 2,
+      src: '../../assets/Icons/waterTreatmentProcess-removebg-preview (1).png',
+      name: 'Water Treatment Systems',
+      link:'/servicesandtechnology/watertreatmentsystems'
+    },
+    {
+      id: 3,
+      src: '../../assets/Icons/wasteManagement.png',
+      name: 'Solid Waste Management Systems',
+      link:'/servicesandtechnology/solidwastemanagement'
+    },
+    {
+      id: 4,
+      src: '../../assets/Icons/spareparts.png',
+      name: 'Product and Spare Parts Supply',
+      link:'/servicesandtechnology/bioaugmentation'
+    },
+    {
+      id: 5,
+      src: '../../assets/Icons/environmental-removebg-preview.png',
+      name: 'Environmental Consulting Service',
+      link:'/servicesandtechnology/environmentalconsultingservice'
+    },
+    {
+      id: 6,
+      src: '../../assets/Icons/serviceMaintainance-removebg-preview.png',
+      name: 'Annual Maintainance',
+      link:'/servicesandtechnology/annualmaintainancecomponent'
+    },
+  ];
+
   repeatArray = Array(4);
   images: any;
   containerWidth: number = 0;
@@ -106,7 +143,6 @@ export class HomeComponent implements OnInit {
   }
 
   trackCenterImage() {
-
     const centerPosition = this.containerWidth / 2;
     this.images.forEach((img: any) => {
       const imgRect = img.getBoundingClientRect();
