@@ -86,6 +86,13 @@ export class HomeComponent implements OnInit {
     { id: 7, src: '../../assets/Logo/logo7.jpg' },
     { id: 8, src: '../../assets/Logo/logo8.jpg' },
     { id: 9, src: '../../assets/Logo/logo9.jpg' },
+    { id: 1, src: '../../assets/Logo/logo1.jpg' },
+    { id: 2, src: '../../assets/Logo/logo2.jpg' },
+    { id: 3, src: '../../assets/Logo/logo3.jpg' },
+    { id: 4, src: '../../assets/Logo/logo4.jpg' },
+    { id: 5, src: '../../assets/Logo/logo5.jpg' },
+    { id: 6, src: '../../assets/Logo/logo6.jpg' },
+    { id: 7, src: '../../assets/Logo/logo7.jpg' },
   ];
 
   services = [
