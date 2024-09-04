@@ -28,12 +28,12 @@ scrollToTableTop(scrlId: any) {
 
 }
 services = [
-  {id:1,src:'../../assets/Icons/waterandsewage.png',name:'Waste Water and Sewage Treatment Systems'},
-  {id:2,src:'../../assets/Icons/waterTreatmentProcess-removebg-preview (1).png',name:'Water Treatment Systems'},
-  {id:3,src:'../../assets/Icons/wasteManagement.png',name:'Solid Waste Management Systems'},
-  {id:4,src:'../../assets/Icons/spareparts.png',name:'Product and Spare Parts Supply'},
-  {id:5,src:'../../assets/Icons/environmental-removebg-preview.png',name:'Environmental Consulting Service'},
-  {id:6,src:'../../assets/Icons/serviceMaintainance-removebg-preview.png',name:'Annual Maintainance'},
+  {id:1,src:'../../assets/Icons/waterandsewage.png',name:'Waste Water and Sewage Treatment Systems', link:'/servicesandtechnology/wastewaterandsewage'},
+  {id:2,src:'../../assets/Icons/waterTreatmentProcess-removebg-preview (1).png',name:'Water Treatment Systems', link:'/servicesandtechnology/watertreatmentsystems'},
+  {id:3,src:'../../assets/Icons/wasteManagement.png',name:'Solid Waste Management Systems', link:'/servicesandtechnology/solidwastemanagement'},
+  {id:4,src:'../../assets/Icons/spareparts.png',name:'Product and Spare Parts Supply', link:'/servicesandtechnology/bioaugmentation'},
+  {id:5,src:'../../assets/Icons/environmental-removebg-preview.png',name:'Environmental Consulting Service', link:'/servicesandtechnology/environmentalconsultingservice'},
+  {id:6,src:'../../assets/Icons/serviceMaintainance-removebg-preview.png',name:'Annual Maintainance', link:'/servicesandtechnology/annualmaintainancecomponent'},
 ]
 
 }
