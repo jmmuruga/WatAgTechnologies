@@ -1,21 +1,20 @@
 .text-stroke {
-    -webkit-text-fill-color: #16bf2e;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-  }
-  .headerSize > a{
-    width:250px;
-    height: 50px;
-    transition: 0.4s;
-    }
-    .headerSize{
-        width: 100%;
-        padding: 10px 80px;
-        color:black;
-        transition: 0.4s;
-        background-color: white;
-        justify-content: space-between;
-    }
-    /* else if (x > 0 && x > 3384 || x > 0 && x > -3384 ) {
+  -webkit-text-fill-color: #0D44A9;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+.headerSize > a {
+  height: 100px;
+  transition: 0.4s;
+}
+.headerSize {
+  width: 100%;
+  padding:0 80px;
+  color: black;
+  transition: 0.4s;
+  background-color: white;
+  justify-content: space-between;
+}
+/* else if (x > 0 && x > 3384 || x > 0 && x > -3384 ) {
         this.carousel.style.transform = "translate3d(-2600px,0px,0px)";
        } */

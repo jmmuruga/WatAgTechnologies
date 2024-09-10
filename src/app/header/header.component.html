@@ -1,42 +1,42 @@
 <header
   #header
-  class="fixed top-0 flex items-center px-20 text-black transition-all z-40 shadow bg-white"
+  class="fixed w-full top-0 flex items-center px-20 text-black transition-all z-40 shadow bg-white"
 >
-  <a href="" class="w-[800px] h-[130px] transition-all">
-    <img class="object-cover" src="../../assets/Logo/companylogo.png" />
-  </a>
+<a href="" class="flex h-[120px] transition-all">
+  <img class="object-cover" src="../../assets/Logo/Frame 9.svg" />
+</a>
   <nav class="w-full transition-all">
     <ul class="flex justify-evenly items-center">
       <li
-        class="cursor-pointer hover:text-green-500 text-sm"
+        class="cursor-pointer hover:text-[var(--primary)] text-sm"
         routerLink="/aboutus"
         routerLinkActive="activeheader"
       >
         ABOUT US
       </li>
       <li
-        class="cursor-pointer hover:text-green-500 text-sm"
+        class="cursor-pointer hover:text-[var(--primary)] text-sm"
         routerLink="/servicesandtechnology"
         routerLinkActive="activeheader"
       >
         SERVICES AND TECHNOLOGY
       </li>
       <li
-        class="cursor-pointer hover:text-green-500 text-sm"
+        class="cursor-pointer hover:text-[var(--primary)] text-sm"
         (click)="OurClients()"
         routerLink="/"
       >
         OUR CLIENTS
       </li>
       <li
-        class="cursor-pointer hover:text-green-500 text-sm"
+        class="cursor-pointer hover:text-[var(--primary)] text-sm"
         routerLink="/gallery"
         routerLinkActive="activeheader"
       >
         GALLERY
       </li>
       <li
-        class="cursor-pointer hover:text-green-500 text-sm"
+        class="cursor-pointer hover:text-[var(--primary)] text-sm"
         routerLink="/contact"
         routerLinkActive="activeheader"
       >

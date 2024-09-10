@@ -1,13 +1,13 @@
 <!--Header-->
 <header
   #header
-  class="fixed top-0 flex items-center px-20 text-white transition-all z-40"
+  class="fixed top-0 flex w-full items-center justify-between px-20 text-white transition-all z-40"
 >
-  <a href="" class="w-[800px] h-[130px] transition-all">
-    <img class="object-cover" src="../../assets/Logo/companylogo.png" />
+  <a href="" class="flex h-[120px] transition-all">
+    <img class="object-cover" src="../../assets/Logo/Frame 9.svg" />
   </a>
-  <nav class="w-full transition-all">
-    <ul class="flex justify-evenly items-center">
+  <nav class="transition-all">
+    <ul class="flex gap-10 justify-evenly items-center">
       <li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>
       <li class="cursor-pointer" routerLink="/servicesandtechnology">
         SERVICES AND TECHNOLOGY
@@ -28,7 +28,7 @@
     background-size: cover;
   "
 >
-  <h1 class="text-6xl font-medium text-stroke">
+  <h1 class="text-6xl font-medium text-stroke text-[var(--secondary)]">
     "Building a More Eco-Friendly World"
   </h1>
 
@@ -37,7 +37,7 @@
   /> -->
   <div
     (click)="scrollToTableTop('HomeContact')"
-    class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-green-500 text-white"
+    class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-[var(--primary)] text-white"
   >
     Get proposal
   </div>
@@ -52,7 +52,7 @@
   <div class="flex items-center py-20">
     <div class="flex flex-col gap-5 items-start">
       <div class="text-2xl">
-        <span class="text-green-500 mr-2">COMPANY</span
+        <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">VISION</span>
       </div>
       <p class="w-[75%] text-stone-800">
@@ -61,7 +61,7 @@
       </p>
       <button
         routerLink="/aboutus"
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm text-white"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm text-white"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -73,7 +73,7 @@
     <img class="w-[522px] h-[378px] rounded" src="../../assets/Banner/gallery3.jpeg" />
     <div class="flex flex-col gap-5 items-end">
       <div class="w-[75%] flex text-2xl">
-        <span class="text-green-500 mr-2">COMPANY</span
+        <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">MISSION</span>
       </div>
       <p class="w-[75%] text-stone-800">
@@ -83,7 +83,7 @@
       <div class="w-[75%]">
         <button
           routerLink="/aboutus"
-          class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm text-white"
+          class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm text-white"
         >
           Know more
           <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -113,7 +113,7 @@
       <div class="text-center">{{service.name}}</div>
       <button
         routerLink={{service.link}}
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -130,7 +130,7 @@
       <div class="text-center">Water Treatment Systems</div>
       <button
         routerLink="/servicesandtechnology/watertreatmentsystems"
-        class="flex items-center justify-center pl-2 py-1 rounded-md font-medium bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 py-1 rounded-md font-medium bg-[var(--primary)] text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -146,7 +146,7 @@
       <div class="text-center">Solid Waste Management Systems</div>
       <button
         routerLink="/servicesandtechnology/solidwastemanagement"
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -162,7 +162,7 @@
       <div class="text-center">Product and Spare Parts Supply</div>
       <button
         routerLink="/servicesandtechnology/bioaugmentation"
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -178,7 +178,7 @@
       <div class="text-center">Environmental Consulting Services</div>
       <button
         routerLink="/servicesandtechnology/environmentalconsultingservice"
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -194,7 +194,7 @@
       <div class="text-center">Annual Maintainance</div>
       <button
         routerLink="/servicesandtechnology/annualmaintainancecomponent"
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-green-500 text-sm"
+        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
       >
         Know more
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
@@ -207,7 +207,7 @@
   id="OurClients"
   class="w-full h-[696px] flex flex-col items-center gap-20 text-white p-20"
   style="
-    background: url(../../assets/Banner/banner-3.jpg) no-repeat center;
+    background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
     background-size: cover;
   "
 >
