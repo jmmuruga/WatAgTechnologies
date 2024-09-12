@@ -31,9 +31,9 @@ export class HomeComponent implements OnInit {
     this.autoSlide = setInterval(() => {
       this.NextSlides(-372);
     }, 5000);
-    setInterval(() => {
-      this.trackCenterImage();
-    }, 0);
+    // setInterval(() => {
+    //   this.trackCenterImage();
+    // }, 0);
   }
 
   scrollToTableTop(scrlId: any) {
@@ -86,6 +86,9 @@ export class HomeComponent implements OnInit {
     { id: 7, src: '../../assets/Logo/logo7.jpg' },
     { id: 8, src: '../../assets/Logo/logo8.jpg' },
     { id: 9, src: '../../assets/Logo/logo9.jpg' },
+    { id: 10, src: '../../assets/Logo/logo10.jpg' },
+    { id: 11, src: '../../assets/Logo/logo11.jpg' },
+    { id: 12, src: '../../assets/Logo/logo12.jpg' },
     { id: 1, src: '../../assets/Logo/logo1.jpg' },
     { id: 2, src: '../../assets/Logo/logo2.jpg' },
     { id: 3, src: '../../assets/Logo/logo3.jpg' },
@@ -143,10 +146,10 @@ export class HomeComponent implements OnInit {
     this.images = document.querySelectorAll('.slideImages');
     this.containerWidth =
       (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
-    this.trackCenterImage();
+    // this.trackCenterImage();
 
-    setInterval(() => this.trackCenterImage(), 100);
-    this.cdr.detectChanges(); // Manually trigger change detection
+    // setInterval(() => this.trackCenterImage(), 100);
+    // this.cdr.detectChanges(); // Manually trigger change detection
   }
 
   trackCenterImage() {

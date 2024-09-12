@@ -81,5 +81,11 @@ export class GalleryComponent implements OnInit {
     { id: 18, src: '../../assets/Banner/gallery18.jpeg' },
     { id: 19, src: '../../assets/Banner/gallery19.jpeg' },
     { id: 20, src: '../../assets/Banner/gallery20.jpeg' },
+    { id: 21, src: '../../assets/Banner/gallery21.png' },
+    { id: 22, src: '../../assets/Banner/gallery22.png' },
+    { id: 23, src: '../../assets/Banner/gallery23.png' },
+    { id: 24, src: '../../assets/Banner/gallery24.png' },
+    { id: 25, src: '../../assets/Banner/gallery25.png' },
+    
   ];
 }
