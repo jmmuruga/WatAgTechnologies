@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     }
     this.autoSlide = setInterval(() => {
       this.NextSlides(-372);
-    }, 5000);
+    }, 3000);
     // setInterval(() => {
     //   this.trackCenterImage();
     // }, 0);
@@ -89,6 +89,8 @@ export class HomeComponent implements OnInit {
     { id: 10, src: '../../assets/Logo/logo10.jpg' },
     { id: 11, src: '../../assets/Logo/logo11.jpg' },
     { id: 12, src: '../../assets/Logo/logo12.jpg' },
+    { id: 13, src: '../../assets/Logo/logo13.jpg' },
+    { id: 14, src: '../../assets/Logo/logo14.jpg' },
     { id: 1, src: '../../assets/Logo/logo1.jpg' },
     { id: 2, src: '../../assets/Logo/logo2.jpg' },
     { id: 3, src: '../../assets/Logo/logo3.jpg' },
@@ -103,37 +105,37 @@ export class HomeComponent implements OnInit {
       id: 1,
       src: '../../assets/Icons/waterandsewage.png',
       name: 'Waste Water and Sewage Treatment Systems',
-      link:'/servicesandtechnology/wastewaterandsewage'
+      link: '/servicesandtechnology/wastewaterandsewage',
     },
     {
       id: 2,
       src: '../../assets/Icons/waterTreatmentProcess-removebg-preview (1).png',
       name: 'Water Treatment Systems',
-      link:'/servicesandtechnology/watertreatmentsystems'
+      link: '/servicesandtechnology/watertreatmentsystems',
     },
     {
       id: 3,
       src: '../../assets/Icons/wasteManagement.png',
       name: 'Solid Waste Management Systems',
-      link:'/servicesandtechnology/solidwastemanagement'
+      link: '/servicesandtechnology/solidwastemanagement',
     },
     {
       id: 4,
       src: '../../assets/Icons/spareparts.png',
       name: 'Product and Spare Parts Supply',
-      link:'/servicesandtechnology/bioaugmentation'
+      link: '/servicesandtechnology/bioaugmentation',
     },
     {
       id: 5,
       src: '../../assets/Icons/environmental-removebg-preview.png',
       name: 'Environmental Consulting Service',
-      link:'/servicesandtechnology/environmentalconsultingservice'
+      link: '/servicesandtechnology/environmentalconsultingservice',
     },
     {
       id: 6,
       src: '../../assets/Icons/serviceMaintainance-removebg-preview.png',
       name: 'Annual Maintainance',
-      link:'/servicesandtechnology/annualmaintainancecomponent'
+      link: '/servicesandtechnology/annualmaintainancecomponent',
     },
   ];
 
