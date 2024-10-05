@@ -11,14 +11,11 @@ body {
 
 @layer {
   :root {
-    --secondary: #0D44A9;
-    --primary :#3C9BDE;
+    --primary: #0D44A9;
+    --secondary:#3C9BDE;
   }
 }
 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
- 

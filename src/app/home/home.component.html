@@ -3,24 +3,37 @@
   #header
   class="fixed top-0 flex w-full items-center justify-between gap-10 px-14 py-5 text-[var(--primary)] transition-all z-40"
 >
-<a href="" class="flex gap-2 w-[700px] items-center transition-all">
-  <div class="flex flex-col justify-center items-center">
-    <img class="logo object-cover" src="../../assets/Logo/logoWithName.png" />
-    <!-- <p class="text-green-500 whitespace-nowrap">Care of nature</p> -->
-  </div>
-<!-- <div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div> -->
-</a>
+  <a href="" class="flex gap-2 w-[700px] items-center transition-all">
+    <div class="flex flex-col justify-center items-center">
+      <img class="logo object-cover" src="../../assets/Logo/logoWithName.png" />
+      <!-- <p class="text-green-500 whitespace-nowrap">Care of nature</p> -->
+    </div>
+    <!-- <div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div> -->
+  </a>
   <nav class="transition-all">
     <ul class="flex gap-10 justify-evenly items-center">
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">ABOUT US</li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/servicesandtechnology">
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
+        ABOUT US
+      </li>
+      <li
+        class="cursor-pointer whitespace-nowrap"
+        routerLink="/servicesandtechnology"
+      >
         SERVICES AND TECHNOLOGY
       </li>
-      <li class="cursor-pointer whitespace-nowrap" (click)="OurClients()" routerLink="/">
+      <li
+        class="cursor-pointer whitespace-nowrap"
+        (click)="OurClients()"
+        routerLink="/"
+      >
         OUR CLIENTS
       </li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">GALLERY</li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">CONTACT</li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
+        GALLERY
+      </li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
+        CONTACT
+      </li>
     </ul>
   </nav>
 </header>
@@ -52,7 +65,7 @@
 </div>
 <!--About-Company-->
 <div id="About" class="p-24">
-  <h2  class="flex justify-center text-2xl font-bold">ABOUT COMPANY</h2>
+  <h2 class="flex justify-center text-2xl font-bold">ABOUT COMPANY</h2>
   <div class="flex items-center py-20">
     <div class="flex flex-col gap-5 items-start">
       <div class="text-2xl">
@@ -60,9 +73,15 @@
         ><span class="font-bold">VISION</span>
       </div>
       <p class="w-[75%] text-stone-800">
-        To be the leader in our service which is so great to people's lives and
-        the Nature.
+        <!-- To be the leader in our service which is so great to people's lives and
+        the Nature. -->
+        Our goal is to become the leading provider of services that not only
+        enrich people's lives but also contribute positively to the well-being
+        of the environment. We aim to deliver exceptional value by creating
+        solutions that improve the quality of life for individuals while
+        fostering sustainability and care for Nature.
       </p>
+
       <button
         routerLink="/aboutus"
         class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm text-white"
@@ -71,18 +90,30 @@
         <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
       </button>
     </div>
-    <img class="w-[522px] h-[378px] rounded" src="../../assets/Banner/gallery8.jpeg" />
+    <img
+      class="w-[522px] h-[378px] rounded"
+      src="../../assets/Banner/gallery8.jpeg"
+    />
   </div>
   <div class="flex items-center pb-20">
-    <img class="w-[522px] h-[378px] rounded" src="../../assets/Banner/gallery3.jpeg" />
+    <img
+      class="w-[522px] h-[378px] rounded"
+      src="../../assets/Banner/gallery3.jpeg"
+    />
     <div class="flex flex-col gap-5 items-end">
       <div class="w-[75%] flex text-2xl">
         <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">MISSION</span>
       </div>
       <p class="w-[75%] text-stone-800">
-        To conserve the earth most precious resources through total water and
-        agriculture management solutions.
+        <!-- To conserve the earth most precious resources through total water and
+        agriculture management solutions.  -->
+        Our mission is to protect and conserve the Earth's most valuable
+        resources by implementing comprehensive water and agriculture management
+        solutions. Through innovative and sustainable practices, we aim to
+        ensure the efficient use of water and agricultural resources,
+        safeguarding them for future generations while supporting current
+        environmental and economic needs.
       </p>
       <div class="w-[75%]">
         <button
@@ -106,24 +137,21 @@
 >
   <h3 class="font-bold text-3xl mb-10">SERVICES</h3>
   <div class="flex flex-wrap justify-center gap-x-5 gap-y-20">
-    <ng-container *ngFor="let service of services" >
-    <div
-      class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
-    >
-      <img
-        class="w-[150px] h-[150px]"
-        [src]="service.src"
-      />
-      <div class="text-center">{{service.name}}</div>
-      <button
-        routerLink={{service.link}}
-        class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
+    <ng-container *ngFor="let service of services">
+      <div
+        class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
       >
-        Know more
-        <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
-      </button>
-    </div>
-  </ng-container>
+        <img class="w-[150px] h-[150px]" [src]="service.src" />
+        <div class="text-center">{{ service.name }}</div>
+        <button
+          routerLink="{{ service.link }}"
+          class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
+        >
+          Know more
+          <img class="w-7 h-7" src="../../assets/Icons/double-chevron.png" />
+        </button>
+      </div>
+    </ng-container>
     <!-- <div
       class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
     >
