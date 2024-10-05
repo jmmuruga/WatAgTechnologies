@@ -1,7 +1,10 @@
-.headerSize > a {
-  height: 70px;
+/* .headerSize > a {
+  height: 90px;
   transition: 0.4s;
 }
+.headerSize .logo{
+  height: 70px !important;
+} */
 .headerSize {
   width: 100%;
   padding: 10px 80px;
@@ -9,6 +12,7 @@
   transition: 0.4s;
   background-color: white;
   justify-content: space-between;
+  box-shadow: 1px 1px 30px 1px rgb(56, 56, 56);
 }
 li:after {
   display: flex;

@@ -1,26 +1,26 @@
 <!--Header-->
 <header
   #header
-  class="fixed top-0 flex w-full items-center justify-between px-20 text-[var(--primary)] transition-all z-40"
+  class="fixed top-0 flex w-full items-center justify-between gap-10 px-14 py-5 text-[var(--primary)] transition-all z-40"
 >
-<a href="" class="flex gap-2 w-[400px] items-center transition-all">
+<a href="" class="flex gap-2 w-[700px] items-center transition-all">
   <div class="flex flex-col justify-center items-center">
-    <img class="object-cover h-[70px]" src="../../assets/Logo/companylogo.png" />
-    <p class="text-green-500 whitespace-nowrap">Care of nature</p>
+    <img class="logo object-cover" src="../../assets/Logo/logoWithName.png" />
+    <!-- <p class="text-green-500 whitespace-nowrap">Care of nature</p> -->
   </div>
-<div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div>
+<!-- <div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div> -->
 </a>
   <nav class="transition-all">
     <ul class="flex gap-10 justify-evenly items-center">
-      <li class="cursor-pointer" routerLink="/aboutus">ABOUT US</li>
-      <li class="cursor-pointer" routerLink="/servicesandtechnology">
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">ABOUT US</li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/servicesandtechnology">
         SERVICES AND TECHNOLOGY
       </li>
-      <li class="cursor-pointer" (click)="OurClients()" routerLink="/">
+      <li class="cursor-pointer whitespace-nowrap" (click)="OurClients()" routerLink="/">
         OUR CLIENTS
       </li>
-      <li class="cursor-pointer" routerLink="/gallery">GALLERY</li>
-      <li class="cursor-pointer" routerLink="/contact">CONTACT</li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">GALLERY</li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">CONTACT</li>
     </ul>
   </nav>
 </header>
@@ -46,13 +46,13 @@
     Get proposal
   </div>
 
-  <a (click)="scrollToTableTop('About')"
+  <a title="about us" class="cursor-pointer" (click)="scrollToTableTop('About')"
     ><img class="w-10 h-10" src="../../assets/Icons/down-arrow (1).png"
   /></a>
 </div>
 <!--About-Company-->
-<div id="About" class="p-20">
-  <h2 class="flex justify-center text-2xl font-bold">ABOUT COMPANY</h2>
+<div id="About" class="p-24">
+  <h2  class="flex justify-center text-2xl font-bold">ABOUT COMPANY</h2>
   <div class="flex items-center py-20">
     <div class="flex flex-col gap-5 items-start">
       <div class="text-2xl">

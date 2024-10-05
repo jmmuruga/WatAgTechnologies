@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 30) {
       this.myElement.nativeElement.classList.add('headerSize');
     } else {
       this.myElement.nativeElement.classList.remove('headerSize');

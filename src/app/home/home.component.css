@@ -3,17 +3,21 @@
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
 }
-.headerSize > a {
-  height: 100px;
+/* .headerSize > a {
+  height: 90px;
   transition: 0.4s;
 }
+.headerSize .logo{
+  height: 70px !important;
+} */
 .headerSize {
   width: 100%;
-  padding:0 80px;
+  padding:10px 80px;
   /* color: black; */
   transition: 0.4s;
   background-color: white;
   justify-content: space-between;
+  box-shadow: 1px 1px 30px 1px rgb(56, 56, 56);
 }
 /* else if (x > 0 && x > 3384 || x > 0 && x > -3384 ) {
         this.carousel.style.transform = "translate3d(-2600px,0px,0px)";

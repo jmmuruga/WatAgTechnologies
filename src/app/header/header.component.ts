@@ -9,7 +9,7 @@ export class HeaderComponent {
   @ViewChild('header') myElement!: ElementRef;
   @HostListener('window:scroll', [])
   onScroll(): void {
-    if (window.scrollY > 0) {
+    if (window.scrollY > 30) {
       this.myElement.nativeElement.classList.add('headerSize');
       // this.logo=this.alternateLogo;
     } else {
