@@ -1,15 +1,15 @@
 <header
   #header
-  class="fixed w-full top-0 flex items-center px-20 py-5 text-black transition-all z-40 shadow bg-white"
+  class="fixed w-full top-0 flex items-center justify-between px-20 py-5 text-black transition-all z-40 shadow bg-white"
 >
-<a href="" class="flex gap-2 w-[700px] justify-center items-center transition-all">
+<a href="" class="flex gap-2 w-[700px] max-[1200px]:w-[400px] justify-center items-center transition-all ">
   <div class="flex flex-col justify-center items-center">
     <img class="logo object-cover " src="../../assets/Logo/logoWithName.png" />
     <!-- <p class="text-green-500 whitespace-nowrap">Care of nature</p> -->
   </div>
 <!-- <div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div> -->
 </a>
-  <nav class="w-full transition-all">
+  <nav class="w-full transition-all max-[1200px]:hidden">
     <ul class="flex justify-evenly items-center">
       <li
         class="cursor-pointer hover:text-[var(--primary)] text-sm"
@@ -48,4 +48,34 @@
       </li>
     </ul>
   </nav>
+  <!--Hamburger-menu-->
+<div class="min-[1201px]:hidden">
+  <img class="h-10 w-10 cursor-pointer" src="../../assets/Icons/icons8-hamburger-menu-50 (1).png">
+  <nav class="transition-all max-[1200px]:hidden">
+    <ul class="flex gap-10 justify-evenly items-center text-black">
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
+        ABOUT US
+      </li>
+      <li
+        class="cursor-pointer whitespace-nowrap"
+        routerLink="/servicesandtechnology"
+      >
+        SERVICES AND TECHNOLOGY
+      </li>
+      <li
+        class="cursor-pointer whitespace-nowrap"
+        (click)="OurClients()"
+        routerLink="/"
+      >
+        OUR CLIENTS
+      </li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
+        GALLERY
+      </li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
+        CONTACT
+      </li>
+    </ul>
+  </nav>
+</div>
 </header>

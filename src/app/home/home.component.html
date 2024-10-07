@@ -3,14 +3,12 @@
   #header
   class="fixed top-0 flex w-full items-center justify-between gap-10 px-14 py-5 text-[var(--primary)] transition-all z-40"
 >
-  <a href="" class="flex gap-2 w-[700px] items-center transition-all">
+  <a href="" class="flex gap-2 w-[700px] max-[1200px]:w-[400px] items-center transition-all">
     <div class="flex flex-col justify-center items-center">
       <img class="logo object-cover" src="../../assets/Logo/logoWithName.png" />
-      <!-- <p class="text-green-500 whitespace-nowrap">Care of nature</p> -->
     </div>
-    <!-- <div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div> -->
   </a>
-  <nav class="transition-all">
+  <nav class="transition-all max-[1200px]:hidden">
     <ul class="flex gap-10 justify-evenly items-center text-black">
       <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
         ABOUT US
@@ -36,6 +34,36 @@
       </li>
     </ul>
   </nav>
+<!--Hamburger-menu-->
+<div class="min-[1201px]:hidden">
+  <img class="h-10 w-10 cursor-pointer" src="../../assets/Icons/icons8-hamburger-menu-50 (1).png">
+  <nav class="transition-all max-[1200px]:hidden">
+    <ul class="flex gap-10 justify-evenly items-center text-black">
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
+        ABOUT US
+      </li>
+      <li
+        class="cursor-pointer whitespace-nowrap"
+        routerLink="/servicesandtechnology"
+      >
+        SERVICES AND TECHNOLOGY
+      </li>
+      <li
+        class="cursor-pointer whitespace-nowrap"
+        (click)="OurClients()"
+        routerLink="/"
+      >
+        OUR CLIENTS
+      </li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
+        GALLERY
+      </li>
+      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
+        CONTACT
+      </li>
+    </ul>
+  </nav>
+</div>
 </header>
 <!--HeroImage-->
 <div
