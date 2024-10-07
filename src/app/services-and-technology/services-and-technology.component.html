@@ -2,7 +2,7 @@
 <div>
   <!--Banner-->
   <div
-    class="w-full h-[400px] flex flex-col gap-10 justify-center items-center mt-[130px]"
+    class="w-full h-[400px] flex flex-col gap-10 justify-center items-center mt-[95px]"
     style="
       background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
       background-size: cover;
@@ -17,31 +17,31 @@
         src="../../assets/Banner/button.png"
       /> -->
     </div>
-    <div (click)="scrollToTableTop('ServicePageContact')" class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-blue-600 text-white" >Get proposal</div>
-
+    <div
+      (click)="scrollToTableTop('ServicePageContact')"
+      class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-blue-600 text-white"
+    >
+      Get proposal
+    </div>
   </div>
   <!--Our-Services-->
   <div class="flex flex-col items-center gap-5 p-20">
     <div class="w-full flex justify-center mb-10 mr-6">
       <div class="text-2xl flex justify-center">
-        <span class="text-green-500 mr-2">OUR</span
+        <span class="text-[var(--primary)] mr-2">OUR</span
         ><span class="font-bold">SERVICES</span>
       </div>
     </div>
-    <div  class="flex flex-wrap justify-center gap-20 w-full">
-     <ng-container *ngFor="let service of services">
-      <div
-        routerLink={{service.link}}
-        class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
-      >
-        <img
-          id="Img1"
-          class="w-[130px] h-[130px]"
-          [src]="service.src"
-        />
-        <div class="text-center">{{service.name}}</div>
-      </div>
-    </ng-container>
+    <div class="flex flex-wrap justify-center gap-20 w-full">
+      <ng-container *ngFor="let service of services">
+        <div
+          routerLink="{{ service.link }}"
+          class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
+        >
+          <img id="Img1" class="w-[130px] h-[130px]" [src]="service.src" />
+          <div class="text-center">{{ service.name }}</div>
+        </div>
+      </ng-container>
     </div>
   </div>
   <!--The-Uniqueness-Of-Our-Services-->
@@ -49,7 +49,7 @@
     class="flex flex-col gap-10 items-center justify-center p-10 bg-[#F1F1F2]"
   >
     <div class="text-2xl">
-      <span class="text-green-500 mr-2">THE UNIQUENESS OF</span
+      <span class="text-[var(--primary)] mr-2">THE UNIQUENESS OF</span
       ><span class="font-bold">OUR SERVICES</span>
     </div>
     <div class="flex gap-20 w-[90%] text-[16px]">
@@ -107,11 +107,11 @@
     </div>
   </div>
   <!--Contact-->
-  <div id="ServicePageContact"
+  <div
+    id="ServicePageContact"
     class="w-full flex flex-col text-white p-20"
     style="
-      background: url(../../assets/Banner/bannerContact.jpg) no-repeat
-        center;
+      background: url(../../assets/Banner/bannerContact.jpg) no-repeat center;
       background-size: cover;
     "
   >
