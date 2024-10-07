@@ -1,6 +1,6 @@
 .text-stroke {
   -webkit-text-fill-color: #0D44A9;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 /* .headerSize > a {
@@ -19,8 +19,13 @@
   justify-content: space-between;
   box-shadow: 1px 1px 30px 1px rgb(56, 56, 56);
 }
+@media screen and (max-width: 1040px) {
+  .headerSize {
+    padding: 10px 28px !important;
+  }
+}
 /* else if (x > 0 && x > 3384 || x > 0 && x > -3384 ) {
         this.carousel.style.transform = "translate3d(-2600px,0px,0px)";
        } */
 
-       
+
