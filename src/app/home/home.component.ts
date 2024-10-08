@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   firstImg: any;
   firstImgWidth: any;
   autoSlide: any;
+  isOpenBtn:boolean=true;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
 
   constructor(private cdr: ChangeDetectorRef) {}

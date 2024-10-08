@@ -1,52 +1,71 @@
 <!--Header-->
-<header
-  #header
-  class="fixed top-0 flex w-full items-center justify-between gap-10 px-14 max-[1040px]:px-7
-  
-  py-5 text-[var(--primary)] transition-all z-40"
->
-  <a
-    href=""
-    class="flex gap-2 w-[700px]  max-[560px]:w-[250px] max-[1200px]:w-[400px] items-center transition-all"
+<header class="w-full fixed top-0 z-40">
+  <div
+    #header
+    class="flex w-full items-center justify-between gap-10 px-14 max-[1040px]:px-7 py-5 text-[var(--primary)] transition-all max-[1200px]:bg-white"
   >
-    <div class="flex flex-col justify-center items-center">
-      <img class="logo object-cover" src="../../assets/Logo/logoWithName.png" />
-    </div>
-  </a>
-  <nav class="transition-all max-[1200px]:hidden">
-    <ul class="flex gap-10 justify-evenly items-center text-black">
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
-        ABOUT US
-      </li>
-      <li
-        class="cursor-pointer whitespace-nowrap"
-        routerLink="/servicesandtechnology"
-      >
-        SERVICES AND TECHNOLOGY
-      </li>
-      <li
-        class="cursor-pointer whitespace-nowrap"
-        (click)="OurClients()"
-        routerLink="/"
-      >
-        OUR CLIENTS
-      </li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
-        GALLERY
-      </li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
-        CONTACT
-      </li>
-    </ul>
-  </nav>
-  <!--Hamburger-menu-->
-  <div class="min-[1201px]:hidden">
-    <img
-      class="h-10 w-10 cursor-pointer"
-      src="../../assets/Icons/icons8-hamburger-menu-50 (1).png"
-    />
+    <a
+      href=""
+      class="flex gap-2 w-[700px] max-[560px]:w-[250px] max-[1200px]:w-[400px] items-center transition-all"
+    >
+      <div class="flex flex-col justify-center items-center">
+        <img
+          class="logo object-cover"
+          src="../../assets/Logo/logoWithName.png"
+        />
+      </div>
+    </a>
     <nav class="transition-all max-[1200px]:hidden">
       <ul class="flex gap-10 justify-evenly items-center text-black">
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
+          ABOUT US
+        </li>
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          routerLink="/servicesandtechnology"
+        >
+          SERVICES AND TECHNOLOGY
+        </li>
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          (click)="OurClients()"
+          routerLink="/"
+        >
+          OUR CLIENTS
+        </li>
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
+          GALLERY
+        </li>
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
+          CONTACT
+        </li>
+      </ul>
+    </nav>
+    <!--Hamburger-button-->
+    <div (click)="isOpenBtn = !isOpenBtn" class="min-[1201px]:hidden flex">
+      <img
+      
+        *ngIf="this.isOpenBtn"
+        id="openBtn"
+        class="h-10 w-10 cursor-pointer"
+        src="../../assets/Icons/icons8-hamburger-menu-50 (1).png"
+      />
+      <img
+      
+        *ngIf="!this.isOpenBtn"
+        id="closebtn"
+        class="h-10 w-10 cursor-pointer"
+        src="../../assets/Icons/icons8-close-48.png"
+      />
+    </div>
+  </div>
+  <!--Hamburger-menu-->
+  <div
+    [ngClass]="{ up: isOpenBtn, down: !isOpenBtn }"
+    class="-z-10 bg-white w-full px-10 py-5 mt-20 absolute top-[-340px] max-h-[400px] overflow-auto min-[1201px]:hidden"
+  >
+    <nav class="transition-all">
+      <ul class="flex flex-col gap-5 justify-evenly text-black">
         <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
           ABOUT US
         </li>
@@ -128,7 +147,9 @@
       src="../../assets/Banner/gallery8.jpeg"
     />
   </div>
-  <div class="flex items-center pb-20 max-[720px]:flex-col-reverse max-[720px]:gap-10">
+  <div
+    class="flex items-center pb-20 max-[720px]:flex-col-reverse max-[720px]:gap-10"
+  >
     <img
       class="w-[50%] max-[720px]:w-full h-[378px] rounded"
       src="../../assets/Banner/gallery3.jpeg"
@@ -208,7 +229,7 @@
       <div class="overflow-hidden">
         <div
           id="Carousel"
-          class="flex items-center gap-[122px] max-w-[4000px] w-[1000px] max-[1070px]:w-[630px] max-[740px]:w-[260px]  h-[400px] max-[720px]:h-[300px] transition-all duration-1000 translate-x-[-2600px]"
+          class="flex items-center gap-[122px] max-w-[4000px] w-[1000px] max-[1070px]:w-[630px] max-[740px]:w-[260px] h-[400px] max-[720px]:h-[300px] transition-all duration-1000 translate-x-[-2600px]"
         >
           <ng-container *ngFor="let repeat of repeatArray">
             <ng-container *ngFor="let img of imageList">
@@ -242,13 +263,17 @@
 >
   <h4 class="font-bold text-3xl self-center">CONTACT</h4>
   <div>
-    <div class="text-2xl my-10 flex justify-center max-[1140px]:text-center max-[1140px]:text-xl max-[720px]:text-base ">
+    <div
+      class="text-2xl my-10 flex justify-center max-[1140px]:text-center max-[1140px]:text-xl max-[720px]:text-base"
+    >
       FILL IN THE FORM BELOW AND WE WILL GET IN TOUCH TO FULFIL YOUR BUSINESS
       REQUIREMENT
     </div>
     <form class="flex flex-col w-full gap-10">
       <div class="flex max-[720px]:flex-col w-full gap-5">
-        <div class="w-[50%] flex max-[720px]:flex-col max-[720px]:w-[100%] flex-col gap-5">
+        <div
+          class="w-[50%] flex max-[720px]:flex-col max-[720px]:w-[100%] flex-col gap-5"
+        >
           <div class="flex max-[720px]:flex-col w-full gap-5">
             <div class="w-full">
               <input
