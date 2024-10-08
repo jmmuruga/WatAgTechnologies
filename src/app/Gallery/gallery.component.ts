@@ -44,7 +44,6 @@ export class GalleryComponent implements OnInit {
     this.zoomImg = value;
   }
   moveSlides(value: any) {
-    debugger;
     const currentIndex = this.galleryPhotos.findIndex(
       (photo) => photo.id === this.zoomImg.id
     );

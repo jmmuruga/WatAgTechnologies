@@ -9,12 +9,10 @@ export class ContactComponent {
   @ViewChild('tableTop') tableTop!: ElementRef;
 
   ngOnInit() {
-    debugger;
     this.scrollToTableTop();
   }
 
   scrollToTableTop() {
-    debugger;
     this.tableTop.nativeElement.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
