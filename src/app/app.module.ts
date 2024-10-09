@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EnvironmentalConsultingServiceComponent } from './services-and-technology/environmental-consulting-service/environmental-consulting-service.component';
 import { AnnualMaintainanceComponent } from './services-and-technology/annual-maintainance/annual-maintainance.component'; // Import MatDialogModule
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,8 @@ import { AnnualMaintainanceComponent } from './services-and-technology/annual-ma
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatDialogModule, // Add MatDialogModule here
   ],
   providers: [],

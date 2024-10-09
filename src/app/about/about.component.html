@@ -223,35 +223,82 @@
         class="w-[526px] h-[500px]"
         src="../../assets/Banner/contact-us-vector.png"
       />
-      <form class="flex flex-col gap-3 w-[35%] max-[850px]:w-[70%] max-[550px]:w-[90%]">
+      <form  [formGroup]="messageForm"
+      autocomplete="off" class="flex flex-col gap-3 w-[35%] max-[850px]:w-[70%] max-[550px]:w-[90%]">
         <div class="flex flex-col gap-2">
           <label>Name<span class="text-red-700">*</span></label>
           <div class="flex gap-3 w-full">
+            <div class="relative w-full">
             <input
               class="h-14 w-full px-2 border border-gray-400 bg-white"
               placeholder="First Name"
-            /><input
+              formControlName="FirstName"
+            />
+            <span
+            class="validation text-red-600 text-xs absolute -bottom-4 right-0"
+            *ngIf="
+              messageForm.controls.FirstName.touched &&
+              messageForm.controls.FirstName.errors
+            "
+            >FirstName is required</span
+          >
+        </div>
+        <div class="relative w-full">
+            <input
               class="h-14 w-full px-2 border border-gray-400 bg-white"
               placeholder="Last Name"
+              formControlName="LastName"
             />
+            <span
+            class="validation text-red-600 text-xs absolute -bottom-4 right-0"
+            *ngIf="
+              messageForm.controls.LastName.touched &&
+              messageForm.controls.LastName.errors
+            "
+            >LastName is required</span
+          >
+        </div >
           </div>
         </div>
-        <div class="flex flex-col gap-2">
-          <label>Phone<span class="text-red-700">*</span></label>
-          <input class="h-14 w-full px-2 border border-gray-400 bg-white" />
+        <div class="flex flex-col gap-2 relative">
+          <label>Phone Number<span class="text-red-700">*</span></label>
+          <input minlength="8" maxlength="15" formControlName="PhoneNumber" class="h-14 w-full px-2 border border-gray-400 bg-white" />
+          <span
+          class="validation text-red-600 text-xs absolute -bottom-4 right-0"
+          *ngIf="
+            messageForm.controls.PhoneNumber.touched &&
+            messageForm.controls.PhoneNumber.errors
+          "
+          >PhoneNumber is required</span
+        >
         </div>
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 relative">
           <label>Email<span class="text-red-700">*</span></label>
-          <input class="h-14 w-full px-2 border border-gray-400 bg-white" />
+          <input formControlName="EmailId" class="h-14 w-full px-2 border border-gray-400 bg-white" />
+          <span
+          class="validation text-red-600 text-xs absolute -bottom-4 right-0"
+          *ngIf="
+            messageForm.controls.EmailId.touched &&
+            messageForm.controls.EmailId.errors
+          "
+          >EmailId is required</span
+        >
         </div>
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 relative">
           <label>Comment Or Message<span class="text-red-700">*</span></label>
-          <textarea
+          <textarea formControlName="Message"
             class="h-28 w-full px-2 border border-gray-400 bg-white"
           ></textarea>
+          <span
+          class="validation text-red-600 text-xs absolute -bottom-4 right-0"
+          *ngIf="
+            messageForm.controls.Message.touched &&
+            messageForm.controls.Message.errors
+          "
+          >Message is required</span>
         </div>
         <div class="flex justify-center my-5">
-          <button
+          <button (click)="onSubmit()"
             class="cursor-pointer px-5 py-2 rounded-md bg-blue-900 text-white"
           >
             Send Message
