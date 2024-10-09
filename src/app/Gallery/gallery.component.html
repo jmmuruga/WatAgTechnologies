@@ -2,7 +2,7 @@
 <app-header />
 <!--Banner-->
 <div
-  class="w-full h-[400px] flex flex-col gap-10 justify-center items-center mt-[93px] max-[1200px]:mt-[90px]"
+  class="w-full h-[400px] flex flex-col gap-10 justify-center items-center"
   style="
     background: url(../../assets/Banner/banner-revised.jpg) no-repeat center;
     background-size: cover;
@@ -106,28 +106,37 @@
 <!--Popup-->
 <div
   *ngIf="this.popup"
-  class="fixed top-0 flex h-[100vh] w-full bg-slate-500 justify-center items-center bg-opacity-80 z-50"
+  class="fixed top-0 flex flex-col gap-2 h-[100vh] w-full bg-slate-500 justify-center items-center bg-opacity-80 z-50"
 >
-  <div class="flex gap-5 max-[400px]:gap-1 w-full justify-center items-center relative">
-    <img (click)="moveSlides('backward')"
-      class="cursor-pointer w-12 h-12 rotate-180 p-2 bg-white rounded"
-      src="../../assets/Icons/icons8-right-arrow-100.png"
-    />
+<div class="self-end pr-10 max-[400px]:pr-2">
+  <img
+  src="../../assets/Icons/icons8-close-100 (1).png"
+  (click)="PopUp(false, '')"
+  class="w-10 h-10 p-2 rounded-full bg-white cursor-pointer"
+  title="close"
+  />
+</div>
+
+  <div class="flex gap-5 max-[400px]:gap-1 w-full justify-center items-center">
+   
     <img
       id="ZoomInImg"
-      class="h-[500px] w-[700px] max-[620px]:h-[300px] max-[620px]:w-[300px] max-[820px]:w-[500px] rounded-lg shadow-2xl shadow-slate-950"
+      class="h-[480px] w-[700px] max-[620px]:h-[300px] max-[620px]:w-[300px] max-[820px]:w-[500px] rounded-lg shadow-2xl shadow-slate-950"
       [src]="this.zoomImg?.src"
     />
-    <img
-      (click)="moveSlides('forward')"
-      class="cursor-pointer w-12 h-12 p-2 bg-white rounded"
-      src="../../assets/Icons/icons8-right-arrow-100.png"
-    />
-    <img
-      src="../../assets/Icons/icons8-close-100 (1).png"
-      (click)="PopUp(false, '')"
-      class="absolute right-10 max-[500px]:right-2 top-0 w-10 h-10 p-2 rounded-full bg-white cursor-pointer"
-      title="close"
-    />
+ 
+  
   </div>
+  <div class="flex gap-10">
+    <img (click)="moveSlides('backward')"
+    class="cursor-pointer w-12 h-12 rotate-180 p-2 bg-white rounded"
+    src="../../assets/Icons/icons8-right-arrow-100.png"
+  />
+    <img
+    (click)="moveSlides('forward')"
+    class="cursor-pointer w-12 h-12 p-2 bg-white rounded"
+    src="../../assets/Icons/icons8-right-arrow-100.png"
+  />
+  </div>
+
 </div>

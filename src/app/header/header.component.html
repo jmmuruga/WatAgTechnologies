@@ -1,81 +1,94 @@
-<header
-  #header
-  class="fixed w-full top-0 flex items-center justify-between px-20 py-5 max-[500px]:py-6 max-[500px]:px-1 max-[1040px]:px-7 text-black transition-all z-40 shadow bg-white"
->
-<a href="" class="flex gap-2 w-[700px] max-[1200px]:w-[400px] max-[500px]:w-[370px] justify-center items-center transition-all ">
-  <div class="flex flex-col justify-center items-center">
-    <img class="logo object-cover " src="../../assets/Logo/logoWithName.png" />
-    <!-- <p class="text-green-500 whitespace-nowrap">Care of nature</p> -->
+<!--Header-->
+<header class="w-full sticky top-0 z-40 ">
+  <div
+    #header
+    class="flex w-full items-center justify-between gap-10 px-16 max-[1040px]:px-7 py-5 text-[var(--primary)] transition-all bg-white max-[1200px]:bg-white"
+  >
+    <a
+      href=""
+      class="flex gap-2 w-[700px] max-[560px]:w-[250px] max-[1200px]:w-[400px] items-center transition-all"
+    >
+      <div class="flex flex-col justify-center items-center">
+        <img
+          class="logo object-cover"
+          src="../../assets/Logo/logoWithName.png"
+        />
+      </div>
+    </a>
+    <nav class="transition-all max-[1200px]:hidden">
+      <ul class="flex gap-10 justify-evenly items-center text-black">
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
+          ABOUT US
+        </li>
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          routerLink="/servicesandtechnology"
+        >
+          SERVICES AND TECHNOLOGY
+        </li>
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          (click)="OurClients()"
+          routerLink="/"
+        >
+          OUR CLIENTS
+        </li>
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
+          GALLERY
+        </li>
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
+          CONTACT
+        </li>
+      </ul>
+    </nav>
+    <!--Hamburger-button-->
+    <div (click)="isOpenBtn = !isOpenBtn" class="min-[1201px]:hidden flex">
+      <img
+      
+        *ngIf="this.isOpenBtn"
+        id="openBtn"
+        class="h-10 w-10 cursor-pointer"
+        src="../../assets/Icons/icons8-hamburger-menu-50 (1).png"
+      />
+      <img
+      
+        *ngIf="!this.isOpenBtn"
+        id="closebtn"
+        class="h-10 w-10 cursor-pointer"
+        src="../../assets/Icons/icons8-close-48.png"
+      />
+    </div>
   </div>
-<!-- <div class="text-[var(--secondary)] text-3xl whitespace-nowrap">WatAg Technologies</div> -->
-</a>
-  <nav class="w-full transition-all max-[1200px]:hidden">
-    <ul class="flex justify-evenly items-center">
-      <li
-        class="cursor-pointer hover:text-[var(--primary)] text-sm"
-        routerLink="/aboutus"
-        routerLinkActive="activeheader"
-      >
-        ABOUT US
-      </li>
-      <li
-        class="cursor-pointer hover:text-[var(--primary)] text-sm"
-        routerLink="/servicesandtechnology"
-        routerLinkActive="activeheader"
-      >
-        SERVICES AND TECHNOLOGY
-      </li>
-      <li
-        class="cursor-pointer hover:text-[var(--primary)] text-sm"
-        (click)="OurClients()"
-        routerLink="/"
-      >
-        OUR CLIENTS
-      </li>
-      <li
-        class="cursor-pointer hover:text-[var(--primary)] text-sm"
-        routerLink="/gallery"
-        routerLinkActive="activeheader"
-      >
-        GALLERY
-      </li>
-      <li
-        class="cursor-pointer hover:text-[var(--primary)] text-sm"
-        routerLink="/contact"
-        routerLinkActive="activeheader"
-      >
-        CONTACT
-      </li>
-    </ul>
-  </nav>
   <!--Hamburger-menu-->
-<div class="min-[1201px]:hidden">
-  <img class="h-10 w-10 cursor-pointer" src="../../assets/Icons/icons8-hamburger-menu-50 (1).png">
-  <nav class="transition-all max-[1200px]:hidden">
-    <ul class="flex gap-10 justify-evenly items-center text-black">
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
-        ABOUT US
-      </li>
-      <li
-        class="cursor-pointer whitespace-nowrap"
-        routerLink="/servicesandtechnology"
-      >
-        SERVICES AND TECHNOLOGY
-      </li>
-      <li
-        class="cursor-pointer whitespace-nowrap"
-        (click)="OurClients()"
-        routerLink="/"
-      >
-        OUR CLIENTS
-      </li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
-        GALLERY
-      </li>
-      <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
-        CONTACT
-      </li>
-    </ul>
-  </nav>
-</div>
+  <div
+    [ngClass]="{ up: isOpenBtn, down: !isOpenBtn }"
+    class="-z-10 bg-white w-full px-10 py-5 mt-20 absolute top-[-340px] max-h-[400px] overflow-auto min-[1201px]:hidden"
+  >
+    <nav class="transition-all">
+      <ul class="flex flex-col gap-5 justify-evenly text-black">
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/aboutus">
+          ABOUT US
+        </li>
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          routerLink="/servicesandtechnology"
+        >
+          SERVICES AND TECHNOLOGY
+        </li>
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          (click)="OurClients()"
+          routerLink="/"
+        >
+          OUR CLIENTS
+        </li>
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery">
+          GALLERY
+        </li>
+        <li class="cursor-pointer whitespace-nowrap" routerLink="/contact">
+          CONTACT
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>

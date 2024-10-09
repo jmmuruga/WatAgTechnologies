@@ -6,6 +6,8 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+
+  isOpenBtn:boolean=true;
   @ViewChild('header') myElement!: ElementRef;
   @HostListener('window:scroll', [])
   onScroll(): void {

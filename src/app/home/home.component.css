@@ -16,8 +16,8 @@
   /* color: black; */
   transition: 0.4s;
   background-color: white;
-  /* justify-content: space-between;
-  box-shadow: 1px 1px 30px 1px rgb(56, 56, 56); */
+  /* justify-content: space-between;*/
+  box-shadow: 1px 1px 30px 1px rgb(128, 128, 128); 
 }
 .down{
   top:0;
