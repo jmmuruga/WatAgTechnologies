@@ -294,14 +294,15 @@
               <input
                 class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
                 placeholder="Last Name"
+                formControlName="LastName"
               />
               <span
               class="validation text-red-600 text-xs absolute -bottom-4 right-0"
               *ngIf="
-                messageForm.controls.FirstName.touched &&
-                messageForm.controls.FirstName.errors
+                messageForm.controls.LastName.touched &&
+                messageForm.controls.LastName.errors
               "
-              >FirstName is required</span
+              >LastName is required</span
             >
             </div>
           </div>
@@ -322,6 +323,7 @@
           </div>
           <div class="flex flex-col relative gap-5">
             <input
+              formControlName="EmailId"
               class="h-10 w-full bg-white bg-opacity-20 rounded-lg border-2 px-2"
               placeholder="Email"
             />
@@ -340,6 +342,7 @@
             <textarea
               class="h-[160px] w-full bg-white bg-opacity-20 rounded-lg border-2 p-2"
               placeholder="Comment or Message"
+              formControlName="Message"
             ></textarea>
             <span
             class="validation text-red-600 text-xs absolute -bottom-4 right-0"
@@ -351,7 +354,7 @@
           </div>
         </div>
       </div>
-      <button
+      <button (click)="onSubmit()"
         class="w-fit self-center px-[100px] max-[400px]:px-12 bg-white text-blue-950 h-10 rounded-full"
       >
         SEND MESSAGE
