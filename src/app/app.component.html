@@ -1,1 +1,17 @@
 <router-outlet></router-outlet>
+<!--Quick-Contact-->
+<a title="call" href="tel:+919739561204"  class="fixed bottom-[100px] right-2 w-14 h-14 cursor-pointer flex justify-center items-center bg-blue-50 rounded-lg border hover:bg-blue-100 hover:border-dashed z-50"><img class="h-10 w-10" src="../../assets/Icons/icons8-call-64 (1).png"></a>
+<a title="whatsapp"
+href="https://wa.me/+919739561204"
+target="_blank"
+class="fixed bottom-7 right-2 w-14 h-14 cursor-pointer flex justify-center items-center bg-blue-50 rounded-lg border hover:bg-blue-100 hover:border-dashed z-50"
+>
+<img class="h-12 w-12" src="../../assets/Icons/icons8-whatsapp-48 (1).png" />
+</a>
+<div title="click to top"
+(click)="scrollToTop()"
+*ngIf="this.headerShadow"
+class="fixed bottom-[172px] right-2 w-14 h-14 cursor-pointer flex justify-center items-center bg-blue-50 rounded-lg border hover:bg-blue-100 hover:border-dashed z-50"
+>
+<img class="h-14 w-14" src="../assets/Icons/icons8-down-arrow-64 (1).png" />
+</div>

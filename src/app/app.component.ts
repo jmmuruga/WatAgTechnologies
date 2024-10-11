@@ -1,5 +1,5 @@
 import { ViewportScroller } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {
   NavigationEnd,
   NavigationStart,
@@ -47,4 +47,17 @@ export class AppComponent {
       }
     });
   }
+  headerShadow: boolean = false;
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    if (window.scrollY > 30) {
+      this.headerShadow = true;
+    } else {
+      this.headerShadow = false;
+    }
+  }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 }
