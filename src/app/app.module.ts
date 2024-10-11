@@ -19,6 +19,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { EnvironmentalConsultingServiceComponent } from './services-and-technology/environmental-consulting-service/environmental-consulting-service.component';
 import { AnnualMaintainanceComponent } from './services-and-technology/annual-maintainance/annual-maintainance.component'; // Import MatDialogModule
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactFormOneComponent } from './contact-form-one/contact-form-one.component';
+import { ContactFormTwoComponent } from './contact-form-two/contact-form-two.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BioAugmentationComponent,
     EnvironmentalConsultingServiceComponent,
     AnnualMaintainanceComponent,
+    ContactFormOneComponent,
+    ContactFormTwoComponent,
   ],
   imports: [
     BrowserModule,

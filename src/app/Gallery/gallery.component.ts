@@ -1,37 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import {  FormControl, FormGroup, Validators } from '@angular/forms';
-import emailjs from '@emailjs/browser';
-@Component({
+import { Component, OnInit } from '@angular/core';@Component({
   selector: 'app-iot',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements OnInit {
-  // isShowBlockDiagram: boolean = false;
-  // isShowDashboard: boolean = false;
-  // isShowSignal: boolean = false;
-  fullName : string = '';
   popup: boolean = false;
   zoomImg: any;
   imgId: any;
   ngOnInit(): void {
-    // this.openTab(1);
   }
-  // openTab(id: Number) {
-  //   if (id == 1) {
-  //     this.isShowBlockDiagram = true;
-  //     this.isShowDashboard = false;
-  //     this.isShowSignal = false;
-  //   } else if (id == 2) {
-  //     this.isShowBlockDiagram = false;
-  //     this.isShowDashboard = false;
-  //     this.isShowSignal = true;
-  //   } else if (id == 3) {
-  //     this.isShowBlockDiagram = false;
-  //     this.isShowDashboard = true;
-  //     this.isShowSignal = false;
-  //   }
-  // }
   scrollToTableTop(scrlId: any) {
     const element = document.getElementById(scrlId);
     if (element) {
@@ -89,41 +66,5 @@ export class GalleryComponent implements OnInit {
     { id: 25, src: '../../assets/Banner/gallery25.png' },
     
   ];
-
-  messageForm = new FormGroup({
-    to_name: new FormControl('Sir/Madam'),
-    FirstName: new FormControl('', [Validators.required]),
-    LastName: new FormControl('', [Validators.required]),
-    CompanyName: new FormControl(''),
-    PhoneNumber: new FormControl('', [Validators.required]),
-    EmailId: new FormControl('', [Validators.email,Validators.required]),
-    Message: new FormControl('', [Validators.required]),
-  });
-  
-  
-  async send() {
-    this.fullName = this.messageForm.value?.FirstName || '' + this.messageForm.value?.LastName || '';
-    emailjs.init('csN6k99_P17n1XR6h');
-    let response = await emailjs.send("service_yo6s73m","template_7cx6ryi",{
-      from_name:this.fullName,
-      to_name: "WatAg Technologies",
-      mailId: this.messageForm.value.EmailId,
-      phone_number:  this.messageForm.value.PhoneNumber,
-      message: this.messageForm.value.Message,
-      });
-    if (response.status == 200 && response.text == 'OK') {
-      this.messageForm.reset();
-    }
-  }
-  
-  async onSubmit() {
-    debugger
-    if (this.messageForm.valid) {
-      await this.send();
-      alert('form Submitted');
-    } else {
-      this.messageForm.markAllAsTouched();
-    }
-  }
 
 }
