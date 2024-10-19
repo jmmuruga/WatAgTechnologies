@@ -173,29 +173,29 @@
     </div>
   </div>
   <!--Experience-->
-  <div
+  <div 
     class="w-full py-20 bg-[var(--primary)] grid grid-cols-4 max-[600px]:grid-cols-1 max-[920px]:grid-cols-2 max-[920px]:gap-y-10 max-[920px]:justify-center items-center justify-evenly"
   >
     <div class="flex flex-col items-center justify-center gap-5">
       <img class="h-20 w-20" src="../../assets/Icons/icons8-office-100.png" />
-      <div class="w-fit rounded text-white">
-        <span class="text-xl">Since</span><span class="text-5xl">2012</span>
+      <div #Experience class="w-fit rounded text-white">
+        <span class="text-xl">Since</span><span class="text-5xl">2022</span>
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-5">
+    <div #Experience class="flex flex-col items-center justify-center gap-5">
       <img
         class="h-20 w-20"
         src="../../assets/Icons/icons8-experience-100.png"
       />
-      <div class="w-fit rounded text-white">
-        <span class="text-5xl">12</span
+      <div #Experience class="w-fit rounded text-white">
+        <span class="text-5xl">{{yearCounts}}</span
         ><span class="text-xl">Years Of Experience</span>
       </div>
     </div>
-    <div class="flex flex-col items-center justify-center gap-5">
+    <div #Experience class="flex flex-col items-center justify-center gap-5">
       <img class="h-20 w-20" src="../../assets/Icons/icons8-project-96.png" />
       <div class="w-fit rounded text-white">
-        <span class="text-5xl">63+</span><span class="text-xl">Projects</span>
+        <span class="text-5xl">{{projectCounts}}+</span><span class="text-xl">Projects</span>
       </div>
     </div>
     <div class="flex flex-col items-center justify-center gap-5">
@@ -204,7 +204,7 @@
         src="../../assets/Icons/icons8-business-team-96.png"
       />
       <div class="w-fit rounded text-white">
-        <span class="text-5xl">100+</span><span class="text-xl">Clients</span>
+        <span class="text-5xl">{{clientCounts}}+</span><span class="text-xl">Clients</span>
       </div>
     </div>
   </div>

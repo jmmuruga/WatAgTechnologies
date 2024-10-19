@@ -11,6 +11,7 @@ export class HeaderComponent {
   @ViewChild('header') myElement!: ElementRef;
   @HostListener('window:scroll', [])
   headerShadow: boolean = false;
+  isCheck:boolean=false;
   onScroll(): void {
     if (window.scrollY > 30) {
       this.myElement.nativeElement.classList.add('headerSize');

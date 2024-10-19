@@ -42,7 +42,7 @@
       </ul>
     </nav>
     <!--Hamburger-button-->
-    <div (click)="isOpenBtn = !isOpenBtn" class="min-[1201px]:hidden flex">
+    <div  (click)="isOpenBtn = !isOpenBtn;isCheck = true" class="min-[1201px]:hidden flex">
       <img
       
         *ngIf="this.isOpenBtn"
@@ -61,7 +61,7 @@
   </div>
   <!--Hamburger-menu-->
   <div
-    [ngClass]="{ up: isOpenBtn, down: !isOpenBtn }"
+  [ngClass]="{ up: isOpenBtn && isCheck, down: !isOpenBtn && isCheck}"
     class="-z-10 bg-white w-full px-10 py-5 mt-20 absolute top-[-340px] max-h-[400px] overflow-auto min-[1201px]:hidden"
   >
     <nav class="transition-all">

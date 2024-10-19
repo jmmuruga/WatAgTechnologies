@@ -36,7 +36,6 @@ export class ContactFormOneComponent {
   }
 
   async onSubmit() {
-    debugger
     if (this.messageForm.valid) {
       await this.send();
       alert('form Submitted');
