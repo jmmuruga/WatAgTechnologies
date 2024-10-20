@@ -53,3 +53,14 @@
        } */
 
 
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 850px;
+  }
+
+img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}

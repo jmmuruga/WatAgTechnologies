@@ -225,6 +225,34 @@
         class="w-7 h-7 cursor-pointer -rotate-180"
         src="../../assets/Icons/right-arrow.png"
     /></a>
+    <div class="slider-container">
+      <div #slider style="display: flex;
+    transition: transform 0.5s linear;gap:50px;" >
+        <ng-container *ngFor="let repeat of repeatArray">
+          <ng-container *ngFor="let img of imageList">
+          <img  [src]="img.src"  >
+          </ng-container>
+        </ng-container>
+      </div>
+  </div>
+    <a
+      id="Right"
+      (click)="NextSlides(-372); clearInterval()"
+      class="p-2 rounded-full bg-black"
+      ><img
+        class="w-7 h-7 cursor-pointer"
+        src="../../assets/Icons/right-arrow.png"
+    /></a>
+  </div>
+  <!-- <div class="flex justify-center items-center gap-10 max-[420px]:gap-1">
+    <a
+      id="Left"
+      (click)="NextSlides(372); clearInterval()"
+      class="p-2 rounded-full bg-black"
+      ><img
+        class="w-7 h-7 cursor-pointer -rotate-180"
+        src="../../assets/Icons/right-arrow.png"
+    /></a>
     <div class="wrapper overflow-hidden max-w-[1200px]">
       <div class="overflow-hidden">
         <div
@@ -250,7 +278,7 @@
         class="w-7 h-7 cursor-pointer"
         src="../../assets/Icons/right-arrow.png"
     /></a>
-  </div>
+  </div> -->
 </div>
 <!--Contact-->
   <app-contact-form-one id="HomeContact"></app-contact-form-one>

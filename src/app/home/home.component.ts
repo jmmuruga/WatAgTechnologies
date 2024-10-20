@@ -20,6 +20,11 @@ export class HomeComponent implements OnInit {
   autoSlide: any;
   isOpenBtn:boolean=true;
   isCheck:boolean=false;
+  @ViewChild('slider') slider!: ElementRef;
+  images: HTMLImageElement[] = [];
+  imageWidth: number = 0;
+  index: number = 0;
+  slideInterval: any;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
   constructor(private cdr: ChangeDetectorRef) {}
 
@@ -34,6 +39,7 @@ export class HomeComponent implements OnInit {
     // setInterval(() => {
     //   this.trackCenterImage();
     // }, 0);
+    this.initializeSlider();
   }
 
   scrollToTableTop(scrlId: any) {
@@ -91,13 +97,6 @@ export class HomeComponent implements OnInit {
     { id: 12, src: '../../assets/Logo/logo12.jpg' },
     { id: 13, src: '../../assets/Logo/logo13.jpg' },
     { id: 14, src: '../../assets/Logo/logo14.jpg' },
-    { id: 1, src: '../../assets/Logo/logo1.jpg' },
-    { id: 2, src: '../../assets/Logo/logo2.jpg' },
-    { id: 3, src: '../../assets/Logo/logo3.jpg' },
-    { id: 4, src: '../../assets/Logo/logo4.jpg' },
-    { id: 5, src: '../../assets/Logo/logo5.jpg' },
-    { id: 6, src: '../../assets/Logo/logo6.jpg' },
-    { id: 7, src: '../../assets/Logo/logo7.jpg' },
   ];
 
   services = [
@@ -140,12 +139,12 @@ export class HomeComponent implements OnInit {
   ];
 
   repeatArray = Array(4);
-  images: any;
+  // images: any;
   containerWidth: number = 0;
   zoomedInImage: any = null;
 
   ngAfterViewInit() {
-    this.images = document.querySelectorAll('.slideImages');
+    // this.images = document.querySelectorAll('.slideImages');
     this.containerWidth =
       (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
     // this.trackCenterImage();
@@ -154,22 +153,22 @@ export class HomeComponent implements OnInit {
     // this.cdr.detectChanges(); // Manually trigger change detection
   }
 
-  trackCenterImage() {
-    const centerPosition = this.containerWidth / 2;
-    this.images.forEach((img: any) => {
-      const imgRect = img.getBoundingClientRect();
-      const imgCenter = imgRect.left + imgRect.width / 2;
-      if (Math.abs(imgCenter - centerPosition) < imgRect.width / 2) {
-        if (this.zoomedInImage !== img) {
-          this.resetZoom();
-          img.style.opacity = '1';
-          img.style.transition = 'transform 0.5s ease';
-          img.style.transform = 'scale(1.5)';
-          this.zoomedInImage = img;
-        }
-      }
-    });
-  }
+  // trackCenterImage() {
+  //   const centerPosition = this.containerWidth / 2;
+  //   this.images.forEach((img: any) => {
+  //     const imgRect = img.getBoundingClientRect();
+  //     const imgCenter = imgRect.left + imgRect.width / 2;
+  //     if (Math.abs(imgCenter - centerPosition) < imgRect.width / 2) {
+  //       if (this.zoomedInImage !== img) {
+  //         this.resetZoom();
+  //         img.style.opacity = '1';
+  //         img.style.transition = 'transform 0.5s ease';
+  //         img.style.transform = 'scale(1.5)';
+  //         this.zoomedInImage = img;
+  //       }
+  //     }
+  //   });
+  // }
   resetZoom() {
     if (this.zoomedInImage) {
       this.zoomedInImage.style.opacity = '0.5';
@@ -178,5 +177,47 @@ export class HomeComponent implements OnInit {
       this.zoomedInImage = null;
     }
   }
+
+
+
+
+  initializeSlider() {
+    // Assuming slider images are already rendered and available for query
+    const sliderElement = this.slider.nativeElement;
+    this.images = [...sliderElement.querySelectorAll('img')] as HTMLImageElement[];
+
+    if (this.images.length > 0) {
+      this.imageWidth = this.images[0].clientWidth;
+      sliderElement.style.transform = `translateX(-${this.index * this.imageWidth}px)`;
+
+      // Automatically slide images every 2 seconds
+      this.slideInterval = setInterval(() => this.slideImages1(), 2000);
+    }
+  }
+
+  slideImages1() {
+    debugger
+    this.index++;
+    const sliderElement = this.slider.nativeElement;
+    sliderElement.style.transition = 'transform 0.5s linear';
+    sliderElement.style.transform = `translateX(-${this.index * this.imageWidth}px)`;
+
+    // Reset the slider when it reaches the duplicated set
+    if (this.index >= this.images.length / 2 ) {
+      setTimeout(() => {
+        sliderElement.style.transition = 'none';
+        this.index = 0;
+        sliderElement.style.transform = `translateX(-${this.index * this.imageWidth}px)`;
+      }, 500); // Match the transition duration (0.5s)
+    }
+  }
+
+  ngOnDestroy() {
+    // Clear the interval when the component is destroyed to avoid memory leaks
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+  }
+
 
 }
