@@ -20,28 +20,43 @@ export class HomeComponent implements OnInit {
   autoSlide: any;
   isOpenBtn: boolean = true;
   isCheck: boolean = false;
-  @ViewChild('slider') slider!: ElementRef;
   images: HTMLImageElement[] = [];
   imageWidth: number = 0;
   index: number = 0;
   slideInterval: any;
+  repeatArray = Array(4);
+  containerWidth: number = 0;
+  zoomedInImage: any = null;
+  @ViewChild('slider') slider!: ElementRef;
   @ViewChild('scrollElement', { static: true }) scrollElement!: ElementRef;
+  @ViewChild('header') myElement!: ElementRef;
+  @ViewChild('slideImages') slideImages!: ElementRef;
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    if (window.scrollY > 30) {
+      this.myElement.nativeElement.classList.add('headerSize');
+    } else {
+      this.myElement.nativeElement.classList.remove('headerSize');
+    }
+  }
   constructor(private cdr: ChangeDetectorRef) {}
-
   ngOnInit() {
-    // this.initializeSlider();
+    this.initializeSlider();
     this.scrollid = localStorage.getItem('scrlid');
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
     }
-    this.autoSlide = setInterval(() => {
-      this.NextSlides(-372);
-    }, 3000);
-    // setInterval(() => {
-    //   this.trackCenterImage();
-    // }, 0);
   }
-
+  ngAfterViewInit() {
+    this.containerWidth =
+      (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
+    this.initializeSlider();
+  }
+  ngOnDestroy() {
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+  }
   scrollToTableTop(scrlId: any) {
     const element = document.getElementById(scrlId);
     if (element) {
@@ -52,36 +67,12 @@ export class HomeComponent implements OnInit {
     }
     localStorage.removeItem('scrlid');
   }
-  @ViewChild('header') myElement!: ElementRef;
-  @ViewChild('slideImages') slideImages!: ElementRef;
 
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    if (window.scrollY > 30) {
-      this.myElement.nativeElement.classList.add('headerSize');
-    } else {
-      this.myElement.nativeElement.classList.remove('headerSize');
-    }
-  }
   OurClients() {
     this.scrollToTableTop('OurClients');
   }
-  slideLen: number = -2600;
-  NextSlides(num: number) {
-    this.PlusSlides((this.slideLen += num));
-  }
-  PlusSlides(x: number) {
-    this.carousel = document.getElementById('Carousel');
-    if ((x < 0 && x < -4600) || x > 0) {
-      this.carousel.style.transform = 'translate3d(-2600px,0px,0px)';
-      this.slideLen = -2600;
-    } else {
-      this.carousel.style.transform = `translate3d(${x}px,0px,0px)`;
-    }
-  }
+
   clearInterval() {
-    // clearInterval(this.autoSlide);
-    // clearInterval(this.autoSlide);
     clearInterval(this.slideInterval);
   }
   imageList: any[] = [
@@ -140,38 +131,6 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  repeatArray = Array(4);
-  // images: any;
-  containerWidth: number = 0;
-  zoomedInImage: any = null;
-
-  ngAfterViewInit() {
-    // this.images = document.querySelectorAll('.slideImages');
-    this.containerWidth =
-      (document.querySelector('#Carousel') as HTMLElement)?.offsetWidth || 0;
-    // this.trackCenterImage();
-
-    // setInterval(() => this.trackCenterImage(), 100);
-    // this.cdr.detectChanges(); // Manually trigger change detection
-
-    this.initializeSlider();
-  }
-  // trackCenterImage() {
-  //   const centerPosition = this.containerWidth / 2;
-  //   this.images.forEach((img: any) => {
-  //     const imgRect = img.getBoundingClientRect();
-  //     const imgCenter = imgRect.left + imgRect.width / 2;
-  //     if (Math.abs(imgCenter - centerPosition) < imgRect.width / 2) {
-  //       if (this.zoomedInImage !== img) {
-  //         this.resetZoom();
-  //         img.style.opacity = '1';
-  //         img.style.transition = 'transform 0.5s ease';
-  //         img.style.transform = 'scale(1.5)';
-  //         this.zoomedInImage = img;
-  //       }
-  //     }
-  //   });
-  // }
   resetZoom() {
     if (this.zoomedInImage) {
       this.zoomedInImage.style.opacity = '0.5';
@@ -193,7 +152,7 @@ export class HomeComponent implements OnInit {
         this.index * this.imageWidth
       }px)`;
 
-       this.slideInterval = setInterval(() => this.slideImages1("-"), 2000);
+      this.slideInterval = setInterval(() => this.slideImages1('-'), 2000);
     }
   }
 
@@ -215,15 +174,12 @@ export class HomeComponent implements OnInit {
     this.slideImages1('-');
   }
   Prev() {
-    // this.slideImages1("+")
-
     if (this.index > 0) {
       this.index--;
       const sliderElement = this.slider.nativeElement;
       sliderElement.style.transition = 'transform 0.5s linear';
       sliderElement.style.transform = `translateX(-${this.index * 300}px)`;
     } else {
-      // Move to the last image when reaching the start
       this.index = this.images.length / 2 - 1;
       const sliderElement = this.slider.nativeElement;
       sliderElement.style.transition = 'none';
@@ -233,13 +189,6 @@ export class HomeComponent implements OnInit {
         this.index--;
         sliderElement.style.transform = `translateX(-${this.index * 300}px)`;
       }, 0);
-    }
-  }
-
-  ngOnDestroy() {
-    // Clear the interval when the component is destroyed to avoid memory leaks
-    if (this.slideInterval) {
-      clearInterval(this.slideInterval);
     }
   }
 }
