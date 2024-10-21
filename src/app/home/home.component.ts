@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   firstImg: any;
   firstImgWidth: any;
   autoSlide: any;
-  isOpenBtn:boolean=true;
-  isCheck:boolean=false;
+  isOpenBtn: boolean = true;
+  isCheck: boolean = false;
   @ViewChild('slider') slider!: ElementRef;
   images: HTMLImageElement[] = [];
   imageWidth: number = 0;
@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
+    // this.initializeSlider();
     this.scrollid = localStorage.getItem('scrlid');
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
@@ -39,7 +40,6 @@ export class HomeComponent implements OnInit {
     // setInterval(() => {
     //   this.trackCenterImage();
     // }, 0);
-    this.initializeSlider();
   }
 
   scrollToTableTop(scrlId: any) {
@@ -80,7 +80,9 @@ export class HomeComponent implements OnInit {
     }
   }
   clearInterval() {
-    clearInterval(this.autoSlide);
+    // clearInterval(this.autoSlide);
+    // clearInterval(this.autoSlide);
+    clearInterval(this.slideInterval);
   }
   imageList: any[] = [
     { id: 1, src: '../../assets/Logo/logo1.jpg' },
@@ -151,8 +153,9 @@ export class HomeComponent implements OnInit {
 
     // setInterval(() => this.trackCenterImage(), 100);
     // this.cdr.detectChanges(); // Manually trigger change detection
-  }
 
+    this.initializeSlider();
+  }
   // trackCenterImage() {
   //   const centerPosition = this.containerWidth / 2;
   //   this.images.forEach((img: any) => {
@@ -178,37 +181,58 @@ export class HomeComponent implements OnInit {
     }
   }
 
-
-
-
   initializeSlider() {
-    // Assuming slider images are already rendered and available for query
     const sliderElement = this.slider.nativeElement;
-    this.images = [...sliderElement.querySelectorAll('img')] as HTMLImageElement[];
+    this.images = [
+      ...sliderElement.querySelectorAll('.img'),
+    ] as HTMLImageElement[];
 
     if (this.images.length > 0) {
       this.imageWidth = this.images[0].clientWidth;
-      sliderElement.style.transform = `translateX(-${this.index * this.imageWidth}px)`;
+      sliderElement.style.transform = `translateX(-${
+        this.index * this.imageWidth
+      }px)`;
 
-      // Automatically slide images every 2 seconds
-      this.slideInterval = setInterval(() => this.slideImages1(), 2000);
+      // this.slideInterval = setInterval(() => this.slideImages1("-"), 2000);
     }
   }
 
-  slideImages1() {
-    debugger
+  slideImages1(value: any) {
     this.index++;
     const sliderElement = this.slider.nativeElement;
     sliderElement.style.transition = 'transform 0.5s linear';
-    sliderElement.style.transform = `translateX(-${this.index * this.imageWidth}px)`;
+    sliderElement.style.transform = `translateX(${value}${this.index * 300}px)`;
 
-    // Reset the slider when it reaches the duplicated set
-    if (this.index >= this.images.length / 2 ) {
+    if (this.index >= this.images.length / 2) {
       setTimeout(() => {
         sliderElement.style.transition = 'none';
         this.index = 0;
-        sliderElement.style.transform = `translateX(-${this.index * this.imageWidth}px)`;
-      }, 500); // Match the transition duration (0.5s)
+        sliderElement.style.transform = `translateX(-${this.index * 300}px)`;
+      }, 500);
+    }
+  }
+  next() {
+    this.slideImages1('-');
+  }
+  Prev() {
+    // this.slideImages1("+")
+
+    if (this.index > 0) {
+      this.index--;
+      const sliderElement = this.slider.nativeElement;
+      sliderElement.style.transition = 'transform 0.5s linear';
+      sliderElement.style.transform = `translateX(-${this.index * 300}px)`;
+    } else {
+      // Move to the last image when reaching the start
+      this.index = this.images.length / 2 - 1;
+      const sliderElement = this.slider.nativeElement;
+      sliderElement.style.transition = 'none';
+      sliderElement.style.transform = `translateX(-${this.index * 300}px)`;
+      setTimeout(() => {
+        sliderElement.style.transition = 'transform 0.5s linear';
+        this.index--;
+        sliderElement.style.transform = `translateX(-${this.index * 300}px)`;
+      }, 0);
     }
   }
 
@@ -218,6 +242,4 @@ export class HomeComponent implements OnInit {
       clearInterval(this.slideInterval);
     }
   }
-
-
 }

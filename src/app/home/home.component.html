@@ -219,28 +219,28 @@
   <div class="flex justify-center items-center gap-10 max-[420px]:gap-1">
     <a
       id="Left"
-      (click)="NextSlides(372); clearInterval()"
+      (click)="Prev(); clearInterval()"
       class="p-2 rounded-full bg-black"
       ><img
         class="w-7 h-7 cursor-pointer -rotate-180"
         src="../../assets/Icons/right-arrow.png"
     /></a>
-    <div class="slider-container">
+    <div class="slider-container overflow-hidden w-[100%] max-w-[850px] max-[1040px]:max-w-[550px] max-[750px]:max-w-[250px]">
       <div #slider style="display: flex;
     transition: transform 0.5s linear;gap:50px;" >
         <ng-container *ngFor="let repeat of repeatArray">
           <ng-container *ngFor="let img of imageList">
-          <img  [src]="img.src"  >
+          <img class="img w-[100%] max-w-[800px] h-auto" [src]="img.src">
           </ng-container>
         </ng-container>
       </div>
   </div>
     <a
       id="Right"
-      (click)="NextSlides(-372); clearInterval()"
+      (click)="next(); clearInterval()"
       class="p-2 rounded-full bg-black"
       ><img
-        class="w-7 h-7 cursor-pointer"
+        class="w-7 h-7 cursor-pointer "
         src="../../assets/Icons/right-arrow.png"
     /></a>
   </div>
