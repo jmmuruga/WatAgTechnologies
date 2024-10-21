@@ -193,7 +193,7 @@ export class HomeComponent implements OnInit {
         this.index * this.imageWidth
       }px)`;
 
-      // this.slideInterval = setInterval(() => this.slideImages1("-"), 2000);
+       this.slideInterval = setInterval(() => this.slideImages1("-"), 2000);
     }
   }
 
