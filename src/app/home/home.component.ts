@@ -41,7 +41,6 @@ export class HomeComponent implements OnInit {
   }
   constructor(private cdr: ChangeDetectorRef) {}
   ngOnInit() {
-    this.initializeSlider();
     this.scrollid = localStorage.getItem('scrlid');
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
@@ -141,7 +140,7 @@ export class HomeComponent implements OnInit {
   }
 
   initializeSlider() {
-    const sliderElement = this.slider.nativeElement;
+    const sliderElement = this.slider.nativeElement || '';
     this.images = [
       ...sliderElement.querySelectorAll('.img'),
     ] as HTMLImageElement[];
