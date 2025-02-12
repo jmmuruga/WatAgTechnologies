@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';@Component({
+import { Component, OnInit } from '@angular/core';
+import { MetaService } from '../meta.service';
+@Component({
   selector: 'app-iot',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css'],
@@ -7,8 +9,16 @@ export class GalleryComponent implements OnInit {
   popup: boolean = false;
   zoomImg: any;
   imgId: any;
+
+  constructor(private metaService: MetaService) {}
+
   ngOnInit(): void {
+    this.metaService.setMetaInfo(
+      'Gallery | WatAg technologies - Waste & Water Treatment Projects',
+      'Explore our services in wastewater treatment, sewage, solid waste management, water treatment, spare parts supply, and environmental consulting.'
+    );
   }
+
   scrollToTableTop(scrlId: any) {
     const element = document.getElementById(scrlId);
     if (element) {
@@ -64,7 +74,5 @@ export class GalleryComponent implements OnInit {
     { id: 23, src: '../../assets/Banner/gallery23.png' },
     { id: 24, src: '../../assets/Banner/gallery24.png' },
     { id: 25, src: '../../assets/Banner/gallery25.png' },
-    
   ];
-
 }

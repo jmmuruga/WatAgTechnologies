@@ -6,6 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ChangeDetectorRef } from '@angular/core';
+import { MetaService } from '../meta.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -39,12 +40,19 @@ export class HomeComponent implements OnInit {
       this.myElement.nativeElement.classList.remove('headerSize');
     }
   }
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private metaService: MetaService
+  ) {}
   ngOnInit() {
     this.scrollid = localStorage.getItem('scrlid');
     if (this.scrollid) {
       setTimeout(() => this.scrollToTableTop(this.scrollid), 0);
     }
+    this.metaService.setMetaInfo(
+      'WatAg technologies | Wastewater, Sewage & Waste Management',
+      'WatAg Technologies provides wastewater, sewage, and solid waste management, water treatment, spare parts supply, and environmental consulting.'
+    );
   }
   ngAfterViewInit() {
     this.containerWidth =

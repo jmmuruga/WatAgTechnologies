@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { MetaService } from '../meta.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -15,14 +16,22 @@ export class AboutComponent implements OnInit {
   clientCounts: number = 0;
   yearCounts: number = 0;
   intervalId: any;
-
-  ngOnInit(): void {}
   @ViewChild('Experience') exp!: ElementRef;
 
   // Listen to window scroll events
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     this.checkIfDivInView();
+  }
+
+  constructor(private metaService: MetaService){
+  }
+  ngOnInit(): void {
+
+    this.metaService.setMetaInfo(
+      'About Us | WatAg Technologies - Leading Water Solutions',
+      'Learn about WatAg Technologies, a leader in wastewater, sewage, and solid waste management, providing water treatment and environmental consulting.'
+    );
   }
 
   checkIfDivInView(): void {
@@ -67,4 +76,5 @@ export class AboutComponent implements OnInit {
       });
     }
   }
+
 }
