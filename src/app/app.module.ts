@@ -13,7 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WasteWaterAndSewageComponent } from './services-and-technology/waste-water-and-sewage/waste-water-and-sewage.component';
 import { WaterTreatmentSystemsComponent } from './services-and-technology/water-treatment-systems/water-treatment-systems.component';
 import { SolidWasteManagementComponent } from './services-and-technology/solid-waste-management/solid-waste-management.component';
-import { BioAugmentationComponent } from './services-and-technology/bio-augmentation/bio-augmentation.component';
+import { ProductsAndSparePartsSupplyComponent } from './services-and-technology/products-and-spare-part-supply/products-and-spare-parts-supply.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EnvironmentalConsultingServiceComponent } from './services-and-technology/environmental-consulting-service/environmental-consulting-service.component';
@@ -35,7 +35,7 @@ import { ContactFormTwoComponent } from './contact-form-two/contact-form-two.com
     WasteWaterAndSewageComponent,
     WaterTreatmentSystemsComponent,
     SolidWasteManagementComponent,
-    BioAugmentationComponent,
+    ProductsAndSparePartsSupplyComponent,
     EnvironmentalConsultingServiceComponent,
     AnnualMaintainanceComponent,
     ContactFormOneComponent,

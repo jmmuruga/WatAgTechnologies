@@ -12,7 +12,7 @@ constructor(private metaService: MetaService) {}
 ngOnInit(): void {
   this.metaService.setMetaInfo(
     'Solid Waste Management | WatAg technologies',
-    'WatAg technologies provides efficient solid waste management solutions, including collection, recycling, disposal, and sustainable waste treatment services.'
+    'WatAg Technologies offers solid waste management solutions, including collection, recycling, disposal, and sustainable waste treatment services.'
   );
 }
 

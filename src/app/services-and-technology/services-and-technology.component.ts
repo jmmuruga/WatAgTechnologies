@@ -53,37 +53,37 @@ export class ServicesAndTechnologyComponent implements OnInit {
       id: 1,
       src: '../../assets/Icons/waterandsewage.png',
       name: 'Waste Water and Sewage Treatment Systems',
-      link: '/servicesandtechnology/wastewaterandsewage',
+      link: '/wastewater-and-sewage-treatment-watag-technologies',
     },
     {
       id: 2,
       src: '../../assets/Icons/waterTreatmentProcess-removebg-preview (1).png',
       name: 'Water Treatment Systems',
-      link: '/servicesandtechnology/watertreatmentsystems',
+      link: '/water-treatment-systems-solutions-watag-technologies',
     },
     {
       id: 3,
       src: '../../assets/Icons/wasteManagement.png',
       name: 'Solid Waste Management Systems',
-      link: '/servicesandtechnology/solidwastemanagement',
+      link: '/solid-waste-management-solutions-watag-technologies',
     },
     {
       id: 4,
       src: '../../assets/Icons/spareparts.png',
       name: 'Product and Spare Parts Supply',
-      link: '/servicesandtechnology/bioaugmentation',
+      link: '/product-and-spare-parts-supply-solutions-watag-technologies',
     },
     {
       id: 5,
       src: '../../assets/Icons/environmental-removebg-preview.png',
       name: 'Environmental Consulting Service',
-      link: '/servicesandtechnology/environmentalconsultingservice',
+      link: '/environmental-consulting-solutions-watag-technologies',
     },
     {
       id: 6,
       src: '../../assets/Icons/serviceMaintainance-removebg-preview.png',
       name: 'Annual Maintainance',
-      link: '/servicesandtechnology/annualmaintainancecomponent',
+      link: '/annual-maintenance-wastewater-sewage-watag-technologies',
     },
   ];
 }

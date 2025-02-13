@@ -11,7 +11,7 @@ export class EnvironmentalConsultingServiceComponent implements OnInit {
   ngOnInit(): void {
     this.metaService.setMetaInfo(
       'Environmental Consulting Services | WatAg technologies',
-      'WatAg technologies offers expert environmental consulting services, including sustainability planning, regulatory compliance, and eco-friendly waste management solutions.'
+      'WatAg Technologies offers environmental consulting, sustainability planning, regulatory compliance, and eco-friendly waste management solutions.'
     );
   }
 

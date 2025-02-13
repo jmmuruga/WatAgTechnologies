@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { MetaService } from 'src/app/meta.service';
 @Component({
-  selector: 'app-bio-augmentation',
-  templateUrl: './bio-augmentation.component.html',
-  styleUrls: ['./bio-augmentation.component.css']
+  selector: 'products-and-spare-parts-supply',
+  templateUrl: './products-and-spare-parts-supply.component.html',
+  styleUrls: ['./products-and-spare-parts-supply.component.css']
 })
-export class BioAugmentationComponent implements OnInit{
+export class ProductsAndSparePartsSupplyComponent implements OnInit{
 
 constructor(private metaService: MetaService) {}
 
 ngOnInit(): void {
   this.metaService.setMetaInfo(
     'Product & Spare Parts Supply | WatAg technologies',
-    'WatAg technologies supplies high-quality products and spare parts for wastewater treatment, sewage systems, solid waste management, and water treatment solutions.'
+    'WatAg Technologies provides quality products and spare parts for wastewater, sewage, solid waste management, and water treatment solutions.'
   );
 }
 

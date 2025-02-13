@@ -12,7 +12,7 @@ constructor(private metaService: MetaService) {}
 ngOnInit(): void {
   this.metaService.setMetaInfo(
     'Annual Maintenance Services | WatAg technologies',
-    'Annual Maintenance Services offers reliable annual maintenance services for wastewater treatment, sewage systems, solid waste management, and water treatment solutions.'
+    'Annual Maintenance Services offers reliable upkeep for wastewater treatment, sewage systems, solid waste management, and water treatment solutions.'
   );
 }
 

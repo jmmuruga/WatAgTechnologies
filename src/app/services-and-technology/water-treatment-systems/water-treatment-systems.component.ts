@@ -11,7 +11,7 @@ constructor(private metaService: MetaService) {}
   ngOnInit(): void {
     this.metaService.setMetaInfo(
       'Water Treatment Systems | WatAg technologies',
-      'WatAg technologies offers advanced water treatment systems for clean, safe, and sustainable water solutions. Expert filtration, purification, and treatment services.'
+      'WatAg Technologies provides advanced water treatment systems for clean, safe, and sustainable water with expert filtration, purification, and treatment.'
     );
   } 
 
