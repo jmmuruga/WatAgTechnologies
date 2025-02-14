@@ -1,7 +1,6 @@
 <!--Header-->
-<header  #header class="w-full fixed top-0 z-40 ">
+<header #header class="w-full fixed top-0 z-40">
   <div
-   
     class="flex w-full items-center justify-between gap-10 px-14 max-[1040px]:px-7 py-5 text-[var(--primary)] transition-all max-[1200px]:bg-white"
   >
     <a
@@ -17,7 +16,10 @@
     </a>
     <nav class="transition-all max-[1200px]:hidden">
       <ul class="flex gap-10 justify-evenly items-center text-black">
-        <li class="cursor-pointer whitespace-nowrap" routerLink="/about-watag-technologies-water-solutions">
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          routerLink="/about-watag-technologies-water-solutions"
+        >
           ABOUT US
         </li>
         <li
@@ -33,25 +35,32 @@
         >
           OUR CLIENTS
         </li>
-        <li class="cursor-pointer whitespace-nowrap" routerLink="/gallery-wastewater-sewage-water-treatment">
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          routerLink="/gallery-wastewater-sewage-water-treatment"
+        >
           GALLERY
         </li>
-        <li class="cursor-pointer whitespace-nowrap" routerLink="/contact-watag-technologies">
+        <li
+          class="cursor-pointer whitespace-nowrap"
+          routerLink="/contact-watag-technologies"
+        >
           CONTACT
         </li>
       </ul>
     </nav>
     <!--Hamburger-button-->
-    <div (click)="isOpenBtn = !isOpenBtn;isCheck = true" class="min-[1201px]:hidden flex">
+    <div
+      (click)="isOpenBtn = !isOpenBtn; isCheck = true"
+      class="min-[1201px]:hidden flex"
+    >
       <img
-      
         *ngIf="this.isOpenBtn"
         id="openBtn"
         class="h-10 w-10 cursor-pointer"
         src="../../assets/Icons/icons8-hamburger-menu-50 (1).png"
       />
       <img
-      
         *ngIf="!this.isOpenBtn"
         id="closebtn"
         class="h-10 w-10 cursor-pointer"
@@ -61,7 +70,7 @@
   </div>
   <!--Hamburger-menu-->
   <div
-    [ngClass]="{ up: isOpenBtn && isCheck, down: !isOpenBtn && isCheck}"
+    [ngClass]="{ up: isOpenBtn && isCheck, down: !isOpenBtn && isCheck }"
     class="-z-10 bg-white w-full px-10 py-5 mt-20 absolute top-[-340px] max-h-[400px] overflow-auto min-[1201px]:hidden"
   >
     <nav class="transition-all">
@@ -119,13 +128,13 @@
 </div>
 <!--About-Company-->
 <div id="About" class="min-[1040px]:p-32 max-[1040px]:px-10 max-[1040px]:py-32">
-  <h2 class="flex justify-center text-3xl font-bold">ABOUT COMPANY</h2>
+  <h1 class="flex justify-center text-3xl font-bold">ABOUT COMPANY</h1>
   <div class="flex items-center py-20 max-[720px]:flex-col max-[720px]:gap-10">
     <div class="flex flex-col gap-5 items-start">
-      <div class="text-2xl">
+      <h2 class="text-2xl">
         <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">VISION</span>
-      </div>
+      </h2>
       <p class="w-[75%] max-[720px]:w-full max-[1200px]:w-[90%] text-stone-800">
         Our goal is to become the leading provider of services that not only
         enrich people's lives but also contribute positively to the well-being
@@ -155,10 +164,10 @@
       src="../../assets/Banner/gallery3.jpeg"
     />
     <div class="flex flex-col gap-5 items-end max-[720px]:items-start">
-      <div class="w-[75%] flex text-2xl">
+      <h2 class="w-[75%] flex text-2xl">
         <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">MISSION</span>
-      </div>
+      </h2>
       <p class="w-[75%] max-[720px]:w-full text-stone-800">
         Our mission is to protect and conserve the Earth's most valuable
         resources by implementing comprehensive water and agriculture management
@@ -187,14 +196,14 @@
     background-size: cover;
   "
 >
-  <h3 class="font-bold text-3xl mb-10">SERVICES</h3>
+  <h2 class="font-bold text-3xl mb-10">SERVICES</h2>
   <div class="flex flex-wrap justify-center gap-x-5 gap-y-20">
     <ng-container *ngFor="let service of services">
       <div
         class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
       >
         <img class="w-[150px] h-[150px]" [src]="service.src" />
-        <div class="text-center">{{ service.name }}</div>
+        <h3 class="text-center">{{ service.name }}</h3>
         <button
           routerLink="{{ service.link }}"
           class="flex items-center justify-center pl-2 font-medium py-1 rounded-md bg-[var(--primary)] text-sm"
@@ -215,7 +224,7 @@
     background-size: cover;
   "
 >
-  <h4 class="font-bold text-3xl">OUR CLIENTS</h4>
+  <h2 class="font-bold text-3xl">OUR CLIENTS</h2>
   <div class="flex justify-center items-center gap-10 max-[420px]:gap-1">
     <a
       id="Left"
@@ -225,22 +234,26 @@
         class="w-7 h-7 cursor-pointer -rotate-180"
         src="../../assets/Icons/right-arrow.png"
     /></a>
-    <div class="slider-container overflow-hidden w-[100%] max-w-[850px] max-[1040px]:max-w-[550px] max-[750px]:max-w-[250px]">
-      <div #slider style="display: flex;
-    transition: transform 0.5s linear;gap:50px;" >
+    <div
+      class="slider-container overflow-hidden w-[100%] max-w-[850px] max-[1040px]:max-w-[550px] max-[750px]:max-w-[250px]"
+    >
+      <div
+        #slider
+        style="display: flex; transition: transform 0.5s linear; gap: 50px"
+      >
         <ng-container *ngFor="let repeat of repeatArray">
           <ng-container *ngFor="let img of imageList">
-          <img class="img w-[100%] max-w-[800px] h-auto" [src]="img.src">
+            <img class="img w-[100%] max-w-[800px] h-auto" [src]="img.src" />
           </ng-container>
         </ng-container>
       </div>
-  </div>
+    </div>
     <a
       id="Right"
       (click)="next(); clearInterval()"
       class="p-2 rounded-full bg-black"
       ><img
-        class="w-7 h-7 cursor-pointer "
+        class="w-7 h-7 cursor-pointer"
         src="../../assets/Icons/right-arrow.png"
     /></a>
   </div>
@@ -281,6 +294,6 @@
   </div> -->
 </div>
 <!--Contact-->
-  <app-contact-form-one id="HomeContact"></app-contact-form-one>
+<app-contact-form-one id="HomeContact"></app-contact-form-one>
 <!--Footer-->
 <app-footer />

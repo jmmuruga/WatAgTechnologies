@@ -8,15 +8,11 @@
       background-size: cover;
     "
   >
-    <div
+    <h1
       class="relative text-5xl font-bold text-white px-40 max-[450px]:text-3xl max-[450px]:px-10 max-[720px]:text-4xl max-[720px]:px-20 py-10 border-2 border-white"
     >
       ABOUT COMPANY
-      <!-- <img
-        class="w-[130px] h-[87px] absolute -top-12 -right-16"
-        src="../../assets/Banner/button.png"
-      /> -->
-    </div>
+    </h1>
     <div
       (click)="scrollToTableTop('AboutusPageContact')"
       class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-[var(--primary)] text-white"
@@ -27,16 +23,14 @@
   <!--Main-content-->
   <div class="flex flex-col gap-14 justify-center items-center my-14">
     <div class="flex flex-col gap-5 w-[75%]">
-      <div class="text-2xl">
+      <h2 class="text-2xl">
         <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">VISION</span>
-      </div>
+      </h2>
       <div class="flex flex-col gap-3">
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
           <p>
-            <!-- To be the leader in our service which is so great to people's lives
-            and the Nature. -->
             Our goal is to become the leading provider of services that not only
             enrich people's lives but also contribute positively to the
             well-being of the environment. We aim to deliver exceptional value
@@ -44,57 +38,17 @@
             individuals while fostering sustainability and care for Nature.
           </p>
         </div>
-        <!-- <div class="flex gap-3 items-baseline">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Green Solutions, established in 1998, are a leading environmental
-            solutions provider that has designed, installed and commissioned
-            over 450 environmental engineering projects, for a wide range of
-            sizes and applications.
-          </p>
-        </div>
-        <div class="flex gap-3 items-baseline">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Green Solutions assures commitment in providing comprehensive
-            support in order to move “Towards A Greener World”
-          </p>
-        </div> -->
       </div>
     </div>
     <div class="flex flex-col gap-5 w-[75%]">
-      <div class="text-2xl">
+      <h2 class="text-2xl">
         <span class="text-[var(--primary)] mr-2">COMPANY</span
         ><span class="font-bold">MISSION</span>
-      </div>
+      </h2>
       <div class="flex flex-col gap-3">
-        <!-- <div class="flex gap-3">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            <span class="font-bold text-blue-900 mr-1">REGISTERED OFFICE:</span
-            >Mumbai
-          </p>
-        </div>
         <div class="flex gap-3 items-baseline">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
           <p>
-            <span class="font-bold text-blue-900 mr-1"
-              >ADMINISTRATIVE AND OPERATIONAL HEADQUARTERS:</span
-            >Coimbatore.
-          </p>
-        </div>
-        <div class="flex gap-3 items-baseline">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            <span class="font-bold text-blue-900 mr-1">OFFICE BRANCHES:</span
-            >Bangalore, Mangalore, Hyderabad, Cochin, Chennai.
-          </p>
-        </div> -->
-        <div class="flex gap-3 items-baseline">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            <!-- To conserve the earth most precious resources through total water
-            and agriculture management solutions. -->
             Our mission is to protect and conserve the Earth's most valuable
             resources by implementing comprehensive water and agriculture
             management solutions. Through innovative and sustainable practices,
@@ -106,10 +60,10 @@
       </div>
     </div>
     <div class="flex flex-col gap-5 w-[75%]">
-      <div class="text-2xl">
+      <h2 class="text-2xl">
         <span class="text-[var(--primary)] mr-2">ABOUT</span
         ><span class="font-bold">US</span>
-      </div>
+      </h2>
       <div class="flex flex-col gap-3">
         <div class="flex gap-3">
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
@@ -153,27 +107,11 @@
           <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
           <p>D. Industries.</p>
         </div>
-        <!-- <div class="flex gap-3 items-baseline">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Green Solutions, established in 1998, are a leading environmental
-            solutions provider that has designed, installed and commissioned
-            over 450 environmental engineering projects, for a wide range of
-            sizes and applications.
-          </p>
-        </div>
-        <div class="flex gap-3 items-baseline">
-          <img class="h-4 w-4" src="../../assets/Icons/right-arrow (1).png" />
-          <p>
-            Green Solutions assures commitment in providing comprehensive
-            support in order to move “Towards A Greener World”
-          </p>
-        </div> -->
       </div>
     </div>
   </div>
   <!--Experience-->
-  <div 
+  <div
     class="w-full py-20 bg-[var(--primary)] grid grid-cols-4 max-[600px]:grid-cols-1 max-[920px]:grid-cols-2 max-[920px]:gap-y-10 max-[920px]:justify-center items-center justify-evenly"
   >
     <div class="flex flex-col items-center justify-center gap-5">
@@ -188,14 +126,15 @@
         src="../../assets/Icons/icons8-experience-100.png"
       />
       <div #Experience class="w-fit rounded text-white">
-        <span class="text-5xl">{{yearCounts}}</span
+        <span class="text-5xl">{{ yearCounts }}</span
         ><span class="text-xl">Years Of Experience</span>
       </div>
     </div>
     <div #Experience class="flex flex-col items-center justify-center gap-5">
       <img class="h-20 w-20" src="../../assets/Icons/icons8-project-96.png" />
       <div class="w-fit rounded text-white">
-        <span class="text-5xl">{{projectCounts}}+</span><span class="text-xl">Projects</span>
+        <span class="text-5xl">{{ projectCounts }}+</span
+        ><span class="text-xl">Projects</span>
       </div>
     </div>
     <div class="flex flex-col items-center justify-center gap-5">
@@ -204,7 +143,8 @@
         src="../../assets/Icons/icons8-business-team-96.png"
       />
       <div class="w-fit rounded text-white">
-        <span class="text-5xl">{{clientCounts}}+</span><span class="text-xl">Clients</span>
+        <span class="text-5xl">{{ clientCounts }}+</span
+        ><span class="text-xl">Clients</span>
       </div>
     </div>
   </div>

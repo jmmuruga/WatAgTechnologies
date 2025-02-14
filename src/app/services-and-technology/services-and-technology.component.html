@@ -8,7 +8,7 @@
       background-size: cover;
     "
   >
-    <div
+    <h1
       class="relative text-5xl font-bold text-white px-40 py-10 max-[450px]:text-3xl max-[450px]:px-10 max-[720px]:text-4xl max-[720px]:px-20 border-2 border-white"
     >
       SERVICES
@@ -16,7 +16,7 @@
         class="w-[130px] h-[87px] absolute -top-12 -right-16"
         src="../../assets/Banner/button.png"
       /> -->
-    </div>
+    </h1>
     <div
       (click)="scrollToTableTop('ServicePageContact')"
       class="cursor-pointer px-6 py-4 font-semibold text-2xl rounded-lg flex justify-center items-center bg-blue-600 text-white"
@@ -27,10 +27,10 @@
   <!--Our-Services-->
   <div class="flex flex-col items-center gap-5 p-20">
     <div class="w-full flex justify-center mb-10">
-      <div class="text-2xl flex justify-center">
+      <h2 class="text-2xl flex justify-center">
         <span class="text-[var(--primary)] mr-2">OUR</span
         ><span class="font-bold">SERVICES</span>
-      </div>
+      </h2>
     </div>
     <div class="flex flex-wrap justify-center gap-20 w-full">
       <ng-container *ngFor="let service of services">
@@ -39,7 +39,7 @@
           class="flex flex-col justify-center items-center p-3 gap-5 w-[252px] h-[303px] cursor-pointer border border-black outline outline-[16px] outline-[#F1F1F2] bg-[#F1F1F2] hover:bg-blue-900 hover:outline-blue-900 hover:border-white hover:text-white"
         >
           <img id="Img1" class="w-[130px] h-[130px]" [src]="service.src" />
-          <div class="text-center">{{ service.name }}</div>
+          <h3 class="text-center">{{ service.name }}</h3>
         </div>
       </ng-container>
     </div>
@@ -48,10 +48,10 @@
   <div
     class="flex flex-col gap-10 items-center justify-center p-10 bg-[#F1F1F2]"
   >
-    <div class="text-2xl max-[400px]:text-base max-[500px]:text-xl text-center">
+    <h2 class="text-2xl max-[400px]:text-base max-[500px]:text-xl text-center">
       <span class="text-[var(--primary)] mr-2">THE UNIQUENESS OF</span
       ><span class="font-bold">OUR SERVICES</span>
-    </div>
+    </h2>
     <div class="flex max-[820px]:flex-col gap-20 max-[820px]:gap-2 max-[820px]:w-[100%] text-[16px]">
       <div class="flex flex-col gap-3">
         <div class="flex gap-3">
