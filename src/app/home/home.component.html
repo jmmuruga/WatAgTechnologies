@@ -153,13 +153,16 @@
     </div>
     <img
       class="w-[50%] max-[720px]:w-full h-[378px] rounded"
+      alt="about vision"
+      title="about vision"
       src="../../assets/Banner/gallery8.jpeg"
     />
   </div>
   <div
     class="flex items-center pb-20 max-[720px]:flex-col-reverse max-[720px]:gap-10"
   >
-    <img
+    <img alt="comapny vision"
+    title="comapny vision"
       class="w-[50%] max-[720px]:w-full h-[378px] rounded"
       src="../../assets/Banner/gallery3.jpeg"
     />
@@ -202,7 +205,7 @@
       <div
         class="flex flex-col gap-5 justify-between items-center w-[280px] h-[300px]"
       >
-        <img class="w-[150px] h-[150px]" [src]="service.src" />
+        <img  [title] = "service.name" [alt] = "service.name" class="w-[150px] h-[150px]" [src]="service.src" />
         <h3 class="text-center">{{ service.name }}</h3>
         <button
           routerLink="{{ service.link }}"
